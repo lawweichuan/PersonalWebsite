@@ -1,16 +1,17 @@
-body
+ body
 {
-  /* colorhunt.co || 898AA6 C9BBCF B7D3DF D6EFED*/
-  /* 146C94 19A7CE AFD3E2 F6F1F1*/
-  /* margin: 0; */
+  /* colorhunt.co || 898AA6 C9BBCF B7D3DF D6EFED
+  146C94 19A7CE AFD3E2 F6F1F1
+  margin: 0;
   text-align: center;
-  /* font-family: 'Montserrat', sans-serif; */
-  /* web safe fonts, css font stack, fonts.google.com */
-  /* font-family: 'Merriweather', serif; */
-  /* https://loremipsumgenerator.com,lorem-ipsum.perbang.dk */
-}
+  font-family: 'Montserrat', sans-serif;
+  web safe fonts, css font stack, fonts.google.com
+  font-family: 'Merriweather', serif;
+  https://loremipsumgenerator.com,lorem-ipsum.perbang.dk */
+   /* min-width:600px; */
+ }
 
-h1
+.main-myname
 {
   position: relative;
   margin: 100px auto 0 auto;
@@ -18,9 +19,10 @@ h1
   font-family: 'Sacramento', cursive;
   color: #66BFBF;
   z-index: 2;
+  font-weight: bold;
 }
 
-h2
+.main-hi
 {
   font-size: 2.5rem;
   margin: 0 auto 30px auto;
@@ -28,7 +30,7 @@ h2
   color: #66BFBF;
 }
 
-h3
+.main-myskill
 {
   font-size: 1.2rem;
   margin: 40px auto 40px auto;
@@ -37,34 +39,37 @@ h3
   font-weight:bolder;
 }
 
-h4
+.main-subtitle
 {
+  font-weight: bold;
   font-size: 2.5rem;
   margin: 0 auto 30px auto;
   font-family: 'Montserrat', sans-serif;
   color: #146C94;
 }
 
-p
+.main-top-container p,.main-middle-container p,.main-bottom-container p
 {
   font-size: 1rem;
   font-family: 'Montserrat', sans-serif;
 }
 
-hr
+.main-middle-container hr,.main-bottom-container hr
 {
   margin: 100px auto;
-  border: dotted #EAF6F6 6px;
+  border: dotted #FFFFFF 6px;
   border-bottom: none;
   width:5%;
+  opacity: .8;
 }
 
 /* Top Container */
-.top-container
+.main-top-container
 {
+  text-align: center;
   position: relative;
   padding-top: 80px;
-  height: 697px;
+  height: 777px;
   background-color: #146C94;
 }
 
@@ -89,8 +94,9 @@ hr
 }
 
 /* Middle Container */
-.middle-container
+.main-middle-container
 {
+  text-align: center;
   width: 100%;
   background-color: #19A7CE;
 }
@@ -106,9 +112,11 @@ hr
 .profile img
 {
   padding-top: 5rem;
+  padding-bottom: 3rem;
 }
 
-.profile-container{
+.profile-container, .hobbies-container
+{
   text-align: justify;
 }
 
@@ -117,7 +125,7 @@ hr
 .profile a:hover { text-decoration: none; }
 .profile a:active { text-decoration: none; }
 
-.skills
+.skills, .hobbies
 {
   /* margin-top: 100px; */
   margin: 0 auto;
@@ -161,6 +169,26 @@ hr
   width: 120px;
 }
 
+.hobbies .btn-outline-primary {
+  font-family: 'Montserrat', sans-serif;
+  --bs-btn-font-weight: 800;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #146C94;
+  --bs-btn-border-color: #146C94;
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+.hobbies .item
+{
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+/* Bottom Container */
 .contact-me a {
   margin: 0 30px 0;
   padding-top: 30px;
@@ -173,12 +201,13 @@ hr
   color: #EAF6F6;
 }
 
-.bottom-container{
+.main-bottom-container{
+  text-align: center;
   padding-top: 10px;
   background-color: #AFD3E2;
 }
 
-.bottom-container a{
+.main-bottom-container a{
   margin: 0 30px 0;
   padding-top: 30px;
   color: #11999E;
@@ -186,30 +215,36 @@ hr
   font-family: 'Montserrat', sans-serif;
 }
 
-.bottom-container p{
+.main-bottom-container p{
   font-family: 'Montserrat', sans-serif;
   color: #000000;
   font-size: 1rem;
 }
 
-.bottom-container h3{
+.main-bottom-container h3{
   margin: 80px auto 40px auto;
 }
 
-.bottom-container h4{
+.main-bottom-container h4{
   margin: 30px auto 30px auto;
 }
 
-.bottom-container h5{
+.main-bottom-container h5{
   font-family: 'Montserrat', sans-serif;
   font-size: .8rem;
   padding-bottom: 20px;
 }
 
-.bottom-container a:hover{
+.vbottom-container a:hover{
   color: #EAF6F6;
 }
 
-.span1 {
-  text-decoration: underline;
+
+@media(max-width:870px){
+  .mountain{
+    position: sticky;
+    top: 420px;
+    left:0%;
+    width:80%;
+  }
 }
