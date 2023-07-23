@@ -20,7 +20,9 @@
 }
 
 #bootstrap-overrides-nav {
-  padding:0 !important;
+  padding:0;
+  background-color: #01567a;
+  color:white;
 }
 
 .main-myname
