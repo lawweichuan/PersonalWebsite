@@ -19,7 +19,26 @@
 </head>
 
 <body>
-  <section class="main-top-container">
+  <section class="main-navbar">
+    <nav id="bootstrap-overrides-nav" class= "navbar bg-dark border-bottom border-bottom-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#profile">Profile</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#hobbies">Hobbies</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section id="home" class="main-top-container">
     <h2 class="main-hi">Hi !</h2>
     <h1 class="main-myname">I'm Wei Chuan</h1>
     <img class="mountain" src="images/mountainbright.png" alt="">
@@ -28,8 +47,9 @@
   </section>
 
   <section class="main-middle-container">
-    <div class="profile">
-      <img src="images/android-chrome-512x512.png" alt="Wei Chuan profile picture" height="350">
+    <div id="profile" class="profile">
+      <!-- <img src="images/android-chrome-512x512.png" alt="Wei Chuan profile picture" height="350"> -->
+      <img src="images/LawWeiChuan_Photo10.png" alt="Wei Chuan profile picture" height="350">
       <h4 class="main-subtitle">Hello.</h4>
       <div class="profile-container">
 
@@ -49,9 +69,10 @@
       </div>
     </div>
 
+    <div id="skills" class="skills">
     <hr>
 
-    <div class="skills">
+
       <h4 class="main-subtitle">My Skills.</h4>
       <div class="skill-row">
         <div class="soft-skill">
@@ -77,8 +98,9 @@
     </div>
 
 
-    <hr>
-    <div class="hobbies">
+
+    <div id="hobbies" class="hobbies">
+          <hr>
       <h4 class="main-subtitle">My Hobbies.</h4>
       <div class="hobbies-container">
           <p> Drawing is one of the most powerful tool I have. It helps me reduce stress and calms my anxiety.
@@ -99,7 +121,7 @@
 
 
   <section class="main-bottom-container">
-    <div class="contact-me">
+    <div id="contact" class="contact-me">
       <h4 class="main-subtitle">Get In Touch.</h4>
       <hr>
       <p>A big thank you for reading this!</p>
