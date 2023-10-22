@@ -1,3 +1,4 @@
+/* Hobbies Page */
 .hobbies-top-container
 {
   background-color: #ef8172;
@@ -5,6 +6,94 @@
   height: 700px;
 }
 
+.hobbies-title
+{
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  margin: 0 auto 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #a84639;
+}
+
+.hobbies-top-container .btn-outline-primary {
+  font-family: 'Montserrat', sans-serif;
+  --bs-btn-font-weight: 800;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #a84639;
+  --bs-btn-border-color: #a84639;
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+/* Robotics Page */
+.robotics-top-container
+{
+  background-color: #7281ef;
+  text-align: center;
+  height: 700px;
+}
+
+.robotics-title
+{
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  margin: 0 auto 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #3946a8;
+}
+
+.robotics-top-container .btn-outline-primary {
+  font-family: 'Montserrat', sans-serif;
+  --bs-btn-font-weight: 800;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #3946a8;
+  --bs-btn-border-color: #3946a8;
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+/* Rendering Page */
+.rendering-top-container
+{
+  background-color: #81ef72;
+  text-align: center;
+  height: 700px;
+}
+
+.rendering-title
+{
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  margin: 0 auto 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #46a839;
+}
+
+.rendering-top-container .btn-outline-primary {
+  font-family: 'Montserrat', sans-serif;
+  --bs-btn-font-weight: 800;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #46a839;
+  --bs-btn-border-color: #46a839;
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+/* Hobbies Page, Robotics Page and Rendering Page */
 .portfolio-image {
   max-height:450px;
   margin: 0;
@@ -25,31 +114,7 @@
   opacity: .8;
 }
 
-.hobbies-title
-{
-  font-weight: bold;
-  font-size: 2.5rem;
-  padding-top: 2rem;
-  margin: 0 auto 2rem auto;
-  font-family: 'Montserrat', sans-serif;
-  color: #a84639;
-}
-
 .carousel{
   position: sticky;
   padding-top: 10px;
-}
-
-.hobbies-top-container .btn-outline-primary {
-  font-family: 'Montserrat', sans-serif;
-  --bs-btn-font-weight: 800;
-  --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: #a84639;
-  --bs-btn-border-color: #a84639;
-  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
-  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
-  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-  --bs-btn-active-color: var(--bs-btn-hover-color);
-  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
-  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }

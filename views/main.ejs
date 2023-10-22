@@ -27,9 +27,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <p id="nav-link-active"><%= navLink %></p>
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#profile">Profile</a>
+            <a class="nav-link" aria-current="page" href="#profile">Profile</a>
             <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#pastproj">Projects</a>
             <a class="nav-link" href="#hobbies">Hobbies</a>
             <a class="nav-link" href="#contact">Contact</a>
           </div>
@@ -51,22 +53,17 @@
 
   <section class="main-middle-container">
     <div id="profile" class="profile">
-      <!-- <img src="images/android-chrome-512x512.png" alt="Wei Chuan profile picture" height="350"> -->
       <img src="images/LawWeiChuan_Photo10.png" alt="Wei Chuan profile picture" height="350">
       <h4 class="main-subtitle">Hello.</h4>
       <div class="profile-container">
 
           <p>I am a research engineer in <a href="https://www.ntu.edu.sg/rris">Rehabilitation Research Institute of Singapore, NTU</a>,
             where I actively engage in robotics innovative solutions.
-          </p>
-          <p>
+
             Presently, I am honing my skills in web development and JavaScript, with the aim of
             leveraging this expertise to stay competitive.
-          </p>
-          <p>
             I am a self-motivated and dedicated person. I love learning new things everyday.
-          </p>
-          <p>Althought I graduated from School of Mechanical Engineering, <strong>I love coding so much! 👍</strong>
+            Althought I graduated from School of Mechanical Engineering, <strong>I love coding so much! 👍</strong>
           </p>
 
       </div>
@@ -74,8 +71,6 @@
 
     <div id="skills" class="skills">
     <hr>
-
-
       <h4 class="main-subtitle">My Skills.</h4>
       <div class="skill-row">
         <div class="soft-skill">
@@ -101,9 +96,37 @@
     </div>
 
 
+    <div id="pastproj" class="pastproj">
+    <hr>
+      <h4 class="main-subtitle">My Past Projects.</h4>
+      <div class="pastproj-container">
+        <p> From tunnel inspection robots to linen gripper, and from industrial automation systems to winch systems,
+            my work reflects the seamless integration of form and function.
+            My robotics development portfolio is more than a showcase; it's a celebration of the future, a testament to the
+            magic of robotics, and an invitation to envision the possibilities of a world where machines and humanity collaborate in perfect harmony.
+
+        </p>
+      </div>
+      <form class="item" action="/hwDesign" method="post">
+        <button type="button submit" name="list" value="" class="btn btn-outline-primary">Robotics Development Portfolio</button>
+      </form>
+      <div class="pastproj-container">
+        <p> In the realm of cutting-edge technology and automation, my passion for robotics comes alive through the art of 3D model rendering.
+          Within these digital pages, I have meticulously curated a collection of my most compelling 3D rendering projects,
+          each a testament to my technical prowess and my ability to breathe life into robotic concepts.
+
+          In the world of robotics, 3D rendering isn't just a visual representation; it's a language that communicates the potential and promise of technology.
+          Through photorealistic renderings and dynamic simulations, I bring these mechanical marvels to life,
+          demonstrating not only their capabilities but also their potential impact on society.
+        </p>
+      </div>
+      <form class="item" action="/hwRender" method="post">
+        <button type="button submit" name="list" value="" class="btn btn-outline-primary">3D Rendering Portfolio</button>
+      </form>
+    </div>
 
     <div id="hobbies" class="hobbies">
-          <hr>
+    <hr>
       <h4 class="main-subtitle">My Hobbies.</h4>
       <div class="hobbies-container">
           <p> Drawing is one of the most powerful tool I have. It helps me reduce stress and calms my anxiety.
@@ -135,5 +158,23 @@
   </section>
 </div>
 
+<script type="text/javascript">
+  window.onload = function ()
+  {
+    var activated_nav_link = document.getElementById("nav-link-active").innerHTML;
+    if(activated_nav_link == "hobbies"){
+      var els = document.querySelectorAll("a[href='#hobbies']");
+      els[0].click();
+    }
+    else if(activated_nav_link == "hwDesign"){
+      var els = document.querySelectorAll("a[href='#pastproj']");
+      els[0].click();
+    }
+    else if(activated_nav_link == "hwRender"){
+      var els = document.querySelectorAll("a[href='#pastproj']");
+      els[0].click();
+    }
+  }
+</script>
 </body>
 </html>

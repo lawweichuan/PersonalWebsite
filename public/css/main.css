@@ -25,6 +25,10 @@
   color:white;
 }
 
+#nav-link-active{
+  display:none;
+}
+
 .main-myname
 {
   position: relative;
@@ -129,7 +133,7 @@
   padding-bottom: 3rem;
 }
 
-.profile-container, .hobbies-container
+.profile-container, .hobbies-container, .pastproj-container
 {
   text-align: justify;
 }
@@ -139,7 +143,7 @@
 .profile a:hover { text-decoration: none; }
 .profile a:active { text-decoration: none; }
 
-.skills, .hobbies
+.skills, .hobbies, .pastproj
 {
   /* margin-top: 100px; */
   margin: 0 auto;
@@ -183,7 +187,7 @@
   width: 120px;
 }
 
-.hobbies .btn-outline-primary {
+.hobbies .btn-outline-primary, .pastproj .btn-outline-primary {
   font-family: 'Montserrat', sans-serif;
   --bs-btn-font-weight: 800;
   --bs-btn-color: var(--bs-white);
@@ -197,7 +201,7 @@
   --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
   --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
-.hobbies .item
+.hobbies .item, .pastproj .item
 {
   padding-top: 20px;
   padding-bottom: 40px;

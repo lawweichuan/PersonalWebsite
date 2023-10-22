@@ -9,11 +9,29 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.post("/", function(req, res){
-    res.redirect("/");
+   const getnavLink = req.body.navLink;
+   res.render("main",{navLink:getnavLink});
+    // res.redirect("/");
 });
 
 app.get("/", function(req, res) {
-    res.render("main");
+    res.render("main",{navLink:""});
+});
+
+app.post("/hwDesign", function(req, res){
+    res.redirect("/hwDesign");
+});
+
+app.get("/hwDesign", function(req,res){
+    res.render("hwDesign");
+});
+
+app.post("/hwRender", function(req, res){
+    res.redirect("/hwRender");
+});
+
+app.get("/hwRender", function(req,res){
+    res.render("hwRender");
 });
 
 app.post("/hobbies", function(req, res){
