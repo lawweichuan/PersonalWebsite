@@ -1,18 +1,4 @@
- body
-{
-  /* colorhunt.co || 898AA6 C9BBCF B7D3DF D6EFED
-  146C94 19A7CE AFD3E2 F6F1F1
-  margin: 0;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  web safe fonts, css font stack, fonts.google.com
-  font-family: 'Merriweather', serif;
-  https://loremipsumgenerator.com,lorem-ipsum.perbang.dk */
-   /* min-width:600px; */
- }
-
 .main-navbar{
-  /* overflow: hidden; */
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
