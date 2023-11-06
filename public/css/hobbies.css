@@ -30,6 +30,13 @@
   --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
 
+#footer-hobbies{
+  background-color: #ef8172;
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
 /* Robotics Page */
 .robotics-top-container
 {
@@ -60,6 +67,13 @@
   --bs-btn-active-color: var(--bs-btn-hover-color);
   --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
   --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+#footer-hwDesign{
+  background-color: #7281ef;
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 /* Rendering Page */
 .rendering-top-container
@@ -93,6 +107,12 @@
   --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
 
+#footer-hwRender{
+  background-color: #81ef72;
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
 /* Hobbies Page, Robotics Page and Rendering Page */
 .portfolio-image {
   max-height:450px;
@@ -117,10 +137,4 @@
 .carousel{
   position: sticky;
   padding-top: 10px;
-}
-
-footer {
-  color: white;
-  color: rgba(0, 0, 0, 0.5);
-  text-align: center;
 }
