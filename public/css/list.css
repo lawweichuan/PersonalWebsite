@@ -15,6 +15,16 @@ body{
   padding: 10px;
 }
 
+.todolist-mid-container
+{
+  margin: 0 0 40pt 0;
+  text-align: center;
+}
+
+.todolist-mid-container i{
+  font-size: 0.8rem;
+}
+
 .todolist-bottom-container
 {
   text-align: center;
@@ -114,7 +124,7 @@ input[type="text"]:focus {
 }
 
 footer {
-  margin-top: 8rem;
+  margin-top: 6rem;
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;

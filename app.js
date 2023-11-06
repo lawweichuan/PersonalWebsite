@@ -51,20 +51,21 @@ app.listen(port, function() {
 
 // To Do List Database
 const mongoose = require("mongoose");
-// mongoose.connect("mongodb://localhost:27017/todolistDB");
-mongoose.connect("mongodb+srv://weichuanlaw:G8226753R@cluster0.jmvsvgj.mongodb.net/todolistDB");
-const itemsSchema = {name: String};
+mongoose.connect("mongodb://localhost:27017/todolistDB");
+// mongoose.connect("mongodb+srv://weichuanlaw:G8226753R@cluster0.jmvsvgj.mongodb.net/todolistDB");
+const itemsSchema = { name: String,
+                      expireAt: {
+                        type: Date,
+                        default: Date.now, // The default expiration time
+                        expires: 0, // Set the TTL index to 0 for dynamic expiration
+                      }
+                  };
 // model is always capitalized, followed by SingularCollectionName,schemaName
 const Item = mongoose.model("Item",itemsSchema);
-const item1 = new Item({name:"Welcome to your todolist!"});
-const item2 = new Item({name:"Hit the + button to add a new item."});
-const item3 = new Item({name:"<-- Hit this to delete an item."});
+const item1 = new Item({name:"Welcome to your todolist!",expireAt:null});
+const item2 = new Item({name:"Hit the + button to add a new item.",expireAt:null});
+const item3 = new Item({name:"<-- Hit this to delete an item.",expireAt:null});
 const defaultItems = [item1,item2,item3];
-const listSchema = {
-  name:String,
-  items:[itemsSchema]
-}
-const List = mongoose.model("List",listSchema);
 
 async function findItems(){
   const Items_ = await Item.find({});
@@ -92,7 +93,6 @@ app.get("/toDoList", function(req, res) {
       res.redirect("/toDoList");
     }
     else {
-      console.log("Activated toDoList");
       res.render("list", {listTitle: "Today", newListItems: foundItems});
     }
   });
@@ -100,7 +100,7 @@ app.get("/toDoList", function(req, res) {
 
 app.post("/toDoList", function(req, res){
   const itemName = req.body.newItem;  // name of input in the form of list.ejs
-  const item = new Item({name:itemName});
+  const item = new Item({name:itemName,expireAt: new Date(Date.now() + 5 * 60 * 1000)}); // 5 minutes
   item.save(); // A mongoose shortcut instead of using other insert methods
   res.redirect("/toDoList");
 });
