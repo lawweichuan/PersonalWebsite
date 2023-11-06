@@ -98,6 +98,7 @@
     <hr>
       <h4 class="main-subtitle">My Past Projects.</h4>
       <div class="pastproj-container">
+        <h4>Robotics Development</h4>
         <p> From tunnel inspection robots to linen gripper, and from industrial automation systems to winch systems,
             my work reflects the seamless integration of form and function.
             My robotics development portfolio is more than a showcase; it's a celebration of the future, a testament to the
@@ -109,6 +110,7 @@
         <button type="button submit" name="list" value="" class="btn btn-outline-primary">Robotics Development Portfolio</button>
       </form>
       <div class="pastproj-container">
+        <h4>3D Model Rendering</h4>
         <p> In the realm of cutting-edge technology and automation, my passion for robotics comes alive through the art of 3D model rendering.
           Within these digital pages, I have meticulously curated a collection of my most compelling 3D rendering projects,
           each a testament to my technical prowess and my ability to breathe life into robotic concepts.
@@ -148,7 +150,7 @@
           continuous deployment (CI/CD) pipeline. CI/CD helps automate the process of building, testing, and deploying
           website whenever changes are pushed to GitHub repository. Here's an overview of the process on how this webpage is deployed:
         </p>
-        <img class="about-img" src="images/web-1.png" alt="">
+        <img class="about-img" src="images/web-3.png" alt="">
         <br>
         <p>
           (1) Source code of HTML, CSS and Javascript are created.
@@ -162,7 +164,16 @@
           This is where the Cyclic part comes in: the process repeats each time there are updates.
         </p>
         <p>
-          (4) Website can be accessed across the world.
+          (4) A simple
+          <!-- <form class="item" action="/toDoList" method="get"> -->
+            <!-- <input type="hidden" name="name" value="" />  -->
+            <!-- <a onclick="this.parentNode.submit();">to-do list</a> -->
+          <!-- </form> -->
+          <a href="toDolist" id="employeeLink">to-do list</a>
+          using MongoDB has been created for demostration.
+        </p>
+        <p>
+          (5) Website can be accessed across the world.
         </p>
       </div>
     </div>
@@ -196,6 +207,10 @@
     }
     else if(activated_nav_link == "hwRender"){
       var els = document.querySelectorAll("a[href='#pastproj']");
+      els[0].click();
+    }
+    else if(activated_nav_link == "about"){
+      var els = document.querySelectorAll("a[href='#about']");
       els[0].click();
     }
   }

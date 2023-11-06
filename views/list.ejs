@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="css/list.css">
+  <link rel="icon" href="images/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="box" id="heading">
+    <h1> <%= listTitle %> </h1>
+  </div>
+
+  <div class="box">
+    <% newListItems.forEach((listItem)=> { %>
+      <!-- This form is for deleting checked items -->
+      <form action="/delete" method="post">
+        <div class="item">
+          <!-- Take the current form that the input is inside, -->
+          <!-- and then submit it to make a post request-->
+          <input type="checkbox" name="checkbox" value="<%=listItem._id%>" onchange="this.form.submit()">
+          <p><%=  listItem.name  %></p>
+        </div>
+        <input type="hidden" name="listName" value = "<%= listTitle %>"></input>
+      </form>
+    <% }); %>
+      <!-- This form is for adding items -->
+    <form class="item" action="/toDoList" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <!-- type="submit" => It will just submit the form only when button is pressed -->
+      <button type="submit" name="list" value="<%= listTitle%>">+</button>
+    </form>
+  </div>
+
+  <div class="todolist-bottom-container">
+    <form class="backbtn" action="/" method="post">
+      <button type="button submit" name="navLink" value="about" class="btn btn-outline-primary">Back To Main Page</button>
+    </form>
+  </div>
+</body>
+
+<footer>
+  © 2023 Law Wei Chuan.
+</footer>
+
+</html>
