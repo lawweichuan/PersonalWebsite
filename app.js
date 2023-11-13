@@ -34,6 +34,14 @@ app.get("/hwRender", function(req,res){
     res.render("hwRender");
 });
 
+app.post("/swDevel", function(req, res){
+    res.redirect("swDevel");
+});
+
+app.get("/swDevel", function(req,res){
+    res.render("swDevel");
+});
+
 app.post("/hobbies", function(req, res){
     res.redirect("/hobbies");
 });

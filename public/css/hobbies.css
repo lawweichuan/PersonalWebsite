@@ -4,6 +4,7 @@
   background-color: #ef8172;
   text-align: center;
   height: 700px;
+  /* height: auto; */
 }
 
 .hobbies-title
@@ -31,10 +32,15 @@
 }
 
 #footer-hobbies{
+  bottom: 0;
+  width: 100%;
   background-color: #ef8172;
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  position:fixed;
+  height: 2.5rem;            /* Footer height */
+  z-index: -1;
 }
 
 /* Robotics Page */
@@ -70,10 +76,15 @@
 }
 
 #footer-hwDesign{
+  bottom: 0;
+  width: 100%;
   background-color: #7281ef;
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  position:fixed;
+  height: 2.5rem;            /* Footer height */
+  z-index: -1;
 }
 /* Rendering Page */
 .rendering-top-container
@@ -108,10 +119,15 @@
 }
 
 #footer-hwRender{
+  bottom: 0;
+  width: 100%;
   background-color: #81ef72;
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  position:fixed;
+  height: 2.5rem;            /* Footer height */
+  z-index: -1;
 }
 /* Hobbies Page, Robotics Page and Rendering Page */
 .portfolio-image {
@@ -137,4 +153,8 @@
 .carousel{
   position: sticky;
   padding-top: 10px;
+}
+
+.item{
+  padding-bottom: 5rem;
 }
