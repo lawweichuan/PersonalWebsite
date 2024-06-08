@@ -1,7 +1,9 @@
 // jshint esversion:6
 
-const express = require("express");
-const bodyParser = require("body-parser");
+// const express = require("express");
+// const bodyParser = require("body-parser");
+import express from "express";
+import bodyParser from "body-parser";
 const app = express();
 var getnavLink = "";
 app.set('view engine', 'ejs');
@@ -58,7 +60,8 @@ app.listen(port, function() {
 
 
 // To Do List Database
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
+import mongoose from "mongoose";
 // mongoose.connect("mongodb://localhost:27017/todolistDB");
 mongoose.connect("mongodb+srv://weichuanlaw:G8226753R@cluster0.jmvsvgj.mongodb.net/todolistDB");
 const itemsSchema = { name: String,
