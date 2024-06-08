@@ -61,9 +61,8 @@ app.listen(port, function() {
 
 // To Do List Database
 // const mongoose = require("mongoose");
-import mongoose from "mongoose";
 // mongoose.connect("mongodb://localhost:27017/todolistDB");
-// mongoose.connect("mongodb+srv://weichuanlaw:G8226753R@cluster0.jmvsvgj.mongodb.net/todolistDB");
+import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 mongoose.connect(process.env.DB_CONN);
