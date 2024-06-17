@@ -29,10 +29,15 @@
   padding-top: 30px;
   margin: 0 auto;
   text-align: left;
-  width: 50%;
+  width: 60%;
   line-height: 2;
   color: #5c3602;
 }
+
+@media(max-width:800px){
+  .software-content{
+      width: 90%;
+    }
 
 .software-top-container .btn-outline-primary {
   font-family: 'Montserrat', sans-serif;

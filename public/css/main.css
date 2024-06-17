@@ -85,15 +85,26 @@
   background-color: #146C94;
 }
 
+.mountain-container{
+  align-items: center
+  top: 420px;
+  height: 357px;
+  width: 40%;
+  /* left:0%; */
+}
+
 .mountain{
   position: absolute;
-  top: 420px;
-  left:30%;
+  bottom: 0px;
+  width: 60%;
+  /* left:0% */
+  /* top: 0px; */
+  /* left:30%; */
 }
 
 .top-cloud {
   position: absolute;
-  top: 100px;
+  top: 140px;
   right: 20%;
   z-index: 1;
 }
@@ -114,13 +125,13 @@
   padding-bottom: 3rem;
 }
 
-.profile
+/* .profile
 {
   margin: 0 auto;
   text-align: center;
   width: 50%;
   line-height: 2;
-}
+} */
 
 .profile img
 {
@@ -138,12 +149,12 @@
 .profile a:hover { text-decoration: none; }
 .profile a:active { text-decoration: none; }
 
-.skills, .hobbies, .pastproj, .about
+.profile, .skills, .hobbies, .pastproj, .about
 {
   /* margin-top: 100px; */
   margin: 0 auto;
   text-align: center;
-  width: 50%;
+  width: 60%;
   line-height: 2;
 }
 
@@ -268,11 +279,17 @@
 }
 
 
-@media(max-width:870px){
+/* @media(max-width:870px){
   .mountain{
-    position: sticky;
-    top: 420px;
+    position: absolute;
+    position: fixed;
+    bottom: 0px;
     left:0%;
-    width:80%;
-  }
+    width:70%;
+} */
+
+@media(max-width:800px){
+    .profile, .skills, .hobbies, .pastproj, .about{
+      width: 90%;
+    }
 }
