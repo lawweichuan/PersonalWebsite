@@ -6,6 +6,7 @@ import express from "express";
 import bodyParser from "body-parser";
 const app = express();
 var getnavLink = "";
+var footerText = "Law Wei Chuan © Updated Jul 2024";
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -17,7 +18,7 @@ app.post("/", function(req, res){
 });
 
 app.get("/", function(req, res) {
-    res.render("main",{navLink:getnavLink});
+    res.render("main",{navLink:getnavLink,setFooterText:footerText});
 });
 
 app.post("/hwDesign", function(req, res){
@@ -25,7 +26,7 @@ app.post("/hwDesign", function(req, res){
 });
 
 app.get("/hwDesign", function(req,res){
-    res.render("hwDesign");
+    res.render("hwDesign",{setFooterText:footerText});
 });
 
 app.post("/hwRender", function(req, res){
@@ -33,7 +34,7 @@ app.post("/hwRender", function(req, res){
 });
 
 app.get("/hwRender", function(req,res){
-    res.render("hwRender");
+    res.render("hwRender",{setFooterText:footerText});
 });
 
 app.post("/swDevel", function(req, res){
@@ -41,7 +42,7 @@ app.post("/swDevel", function(req, res){
 });
 
 app.get("/swDevel", function(req,res){
-    res.render("swDevel");
+    res.render("swDevel",{setFooterText:footerText});
 });
 
 app.post("/hobbies", function(req, res){
@@ -49,7 +50,7 @@ app.post("/hobbies", function(req, res){
 });
 
 app.get("/hobbies", function(req,res){
-    res.render("hobbies");
+    res.render("hobbies",{setFooterText:footerText});
 });
 
 var port = process.env.PORT || 3000;
@@ -106,7 +107,7 @@ app.get("/toDoList", function(req, res) {
       res.redirect("/toDoList");
     }
     else {
-      res.render("list", {listTitle: "Today", newListItems: foundItems});
+      res.render("list", {listTitle: "Today", newListItems: foundItems,setFooterText:footerText});
     }
   });
 });

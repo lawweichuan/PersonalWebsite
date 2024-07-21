@@ -54,7 +54,7 @@
   color: #042330;
 }
 
-.pastproj-subtitle
+.pastproj-subtitle, .publication-subtitle
 {
   color: #083f54;
 }
@@ -139,7 +139,7 @@
   padding-bottom: 3rem;
 }
 
-.profile-container, .hobbies-container, .pastproj-container, .about-container
+.profile-container, .hobbies-container, .pastproj-container, .publication-container, .about-container
 {
   text-align: justify;
 }
@@ -149,7 +149,7 @@
 .profile a:hover { text-decoration: none; }
 .profile a:active { text-decoration: none; }
 
-.profile, .skills, .hobbies, .pastproj, .about
+.profile, .skills, .hobbies, .publication, .pastproj, .about
 {
   /* margin-top: 100px; */
   margin: 0 auto;
