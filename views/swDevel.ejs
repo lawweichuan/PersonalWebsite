@@ -56,6 +56,53 @@
           </p>
         </div>
         <div class="pastproj-container">
+          <li class="pastproj-subtitle"><h4>Simulation of Upper Limb Exoskeleton</h4></li>
+          <ul>
+            <li><h4>RViz</h4></li>
+              <img src="images/rviz2.gif" alt="" width="100%">
+              <p>
+                This robot arm is designed to provide assistive force for patients suffering from stroke, spinal cord injuries,
+                or weak motor control in their arms. Occasionally, collisions occur between humans and the robot arm at specific
+                postures due to its design. A colleague has developed an algorithm to define a spectrum of postures that could
+                potentially lead to collisions. This algorithm determines the angles and positions of both the human arm and the
+                 robot arm during collisions. I have created a simulation of the human and robot arms in RViz to verify potential
+                 collisions at these specific postures. Sliding bars are used to adjust the angle of each joint according to the
+                 orientations and positions of the arms provided by the algorithm, allowing us to visually inspect whether
+                 collisions occur. Once all potential collisions have been validated, we will improve our control algorithm to
+                 prevent users of the robot arm from moving into postures that lead to collisions.
+            </p>
+            <img src="images/CollisionAndNonCollision.png" alt="" width="100%">
+            <p>
+                The image on the left shows the normal interaction between human and the robot arm. The image on the right shows
+                one of the postures detected by our algorithm that leads to a collision.
+            </p>
+            <li><h4>Gazebo</h4></li>
+              <img src="images/gazebo.gif" alt="" width="100%">
+              <p>
+                Another objective of the simulation is to validate the feasibility and capabilities of our developed models.
+                The robot arm operates in multiple modes, including compensating for its own gravitational force to maintain
+                its posture in 3D space and providing patients with dynamic assistive forces for activities of daily living
+                such as eating, drinking, and reaching items. Gazebo can simulate a physics environment; however, due to the
+                design of the robotic arm, it encounters difficulties in simulating closed kinematic chains when using URDF.
+                The simulation does not enforce constraints to maintain closed linkages, causing the links forming the robot
+                arm to separate as soon as the simulation starts. I couldn't switch to SDF as several ROS tools still rely on
+                URDF. Therefore, Mujoco is being considered as an alternative option.
+              </p>
+            <li><h4>Mujoco</h4></li>
+              <img src="images/Mujoco_GP.gif" alt="" width="100%">
+              <img src="images/Mujoco_AD.gif" alt="" width="100%">
+              <p>
+                Mujoco has the capability to simulate the model in a physics environment. Although Mujoco cannot directly simulate
+                closed-loop link mechanisms, it offers unique functions to achieve this. I used its Weld function to create
+                closed-loop mechanisms. Subsequently, we employed our developed model in the simulation for verification.
+                Behaviorally, we observed minor differences between the simulation and reality of the robot arm, likely due
+                 to factors such as unmodeled wires affecting the center of gravity of the robot links and friction in each
+                 joint. By adjusting parameters such as the friction coefficient and damping, its behavior in the simulation
+                  aligns more closely with our expectations.
+              </p>
+          </ul>
+        </div>
+        <div class="pastproj-container">
           <li class="pastproj-subtitle"><h4>Application for Upper Limb Exoskeleton</h4></li>
           <img src="images/sw-ULExoGUI_2.png" alt="" width="100%">
           <p> I was tasked with designing the entire software architecture, integrating software components with the Boost library and
