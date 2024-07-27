@@ -57,24 +57,32 @@
         </div>
         <div class="pastproj-container">
           <li class="pastproj-subtitle"><h4>Simulation of Upper Limb Exoskeleton</h4></li>
+          <p>
+            This robot arm (Upper Limb Exoskeleton) is designed to provide assistive force for patients suffering from stroke,
+            spinal cord injuries or weak motor control in their arms to regain the ability to perform daily tasks such as
+            eating, drinking, and other personal care activities independently. The assistive support force from the robot arm
+            encourages patients to engage more in daily activities, which can contribute to overall physical and mental well-being.
+            In other words, improving the ability to perform ADLs also directly impacts a patient's quality of life.
+          </p>
           <ul>
             <li><h4>RViz</h4></li>
-              <img src="images/rviz2.gif" alt="" width="100%">
-              <p>
-                This robot arm is designed to provide assistive force for patients suffering from stroke, spinal cord injuries,
-                or weak motor control in their arms. Occasionally, collisions occur between humans and the robot arm at specific
+            <img src="images/rviz2.gif" alt="" width="100%">
+            <p>
+                The robot arm is attached to the user's forearm to provide assistive force. Occasionally, collisions occur between
+                humans and the robot arm at specific
                 postures due to its design. A colleague has developed an algorithm to define a spectrum of postures that could
                 potentially lead to collisions. This algorithm determines the angles and positions of both the human arm and the
-                 robot arm during collisions. I have created a simulation of the human and robot arms in RViz to verify potential
-                 collisions at these specific postures. Sliding bars are used to adjust the angle of each joint according to the
-                 orientations and positions of the arms provided by the algorithm, allowing us to visually inspect whether
-                 collisions occur. Once all potential collisions have been validated, we will improve our control algorithm to
-                 prevent users of the robot arm from moving into postures that lead to collisions.
+                robot arm during collisions. I have created a simulation of the human and robot arms in RViz to verify potential
+                collisions at these specific postures. Sliding bars are used to adjust the angle of each joint according to the
+                orientations and positions of the arms provided by the algorithm, allowing us to visually inspect whether
+                collisions occur. Once all potential collisions have been validated, we will improve our control algorithm to
+                prevent users of the robot arm from moving into postures that lead to collisions.
             </p>
             <img src="images/CollisionAndNonCollision.png" alt="" width="100%">
             <p>
                 The image on the left shows the normal interaction between human and the robot arm. The image on the right shows
-                one of the postures detected by our algorithm that leads to a collision.
+                one of the postures detected by our algorithm that leads to a collision. The upper arm (Orange) collides with one
+                of the links (Turquoise).
             </p>
             <li><h4>Gazebo</h4></li>
               <img src="images/gazebo.gif" alt="" width="100%">
@@ -89,16 +97,24 @@
                 URDF. Therefore, Mujoco is being considered as an alternative option.
               </p>
             <li><h4>Mujoco</h4></li>
-              <img src="images/Mujoco_GP.gif" alt="" width="100%">
-              <img src="images/Mujoco_AD.gif" alt="" width="100%">
               <p>
                 Mujoco has the capability to simulate the model in a physics environment. Although Mujoco cannot directly simulate
                 closed-loop link mechanisms, it offers unique functions to achieve this. I used its Weld function to create
                 closed-loop mechanisms. Subsequently, we employed our developed model in the simulation for verification.
                 Behaviorally, we observed minor differences between the simulation and reality of the robot arm, likely due
-                 to factors such as unmodeled wires affecting the center of gravity of the robot links and friction in each
-                 joint. By adjusting parameters such as the friction coefficient and damping, its behavior in the simulation
-                  aligns more closely with our expectations.
+                to factors such as unmodeled wires affecting the center of gravity of the robot links and friction in each
+                joint. By adjusting parameters such as the friction coefficient and damping, its behavior in the simulation
+                aligns more closely with our expectations.
+              </p>
+              <img src="images/Mujoco_GP.gif" alt="" width="100%">
+              <p>
+                This image illustrates the robot arm performing the function of gravity compensation. It supports its own weight
+                and maintains its posture in 3D space.
+              </p>
+              <img src="images/Mujoco_RobotHuman.gif" alt="" width="100%">
+              <p>
+                This image illustrates the robot arm attached to the user's forearm, demonstrating realistic interactions
+                in a physical environment.
               </p>
           </ul>
         </div>
