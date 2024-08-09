@@ -100,10 +100,10 @@
               <p>
                 Mujoco has the capability to simulate the model in a physics environment. Although Mujoco cannot directly simulate
                 closed-loop link mechanisms, it offers unique functions to achieve this. I used its Weld function to create
-                closed-loop mechanisms. Subsequently, we employed our developed model in the simulation for verification.
+                closed-loop mechanisms. Subsequently, we employed our developed control models in the simulation for verification.
                 Behaviorally, we observed minor differences between the simulation and reality of the robot arm, likely due
                 to factors such as unmodeled wires affecting the center of gravity of the robot links and friction in each
-                joint. By adjusting parameters such as the friction coefficient and damping, its behavior in the simulation
+                joint. By adjusting parameters such as the friction coefficient, damping, etc., its behavior in the simulation
                 aligns more closely with our expectations.
               </p>
               <img src="images/Mujoco_GP.gif" alt="" width="100%">
@@ -128,6 +128,17 @@
             enables users to input customized parameters where the data will be saved for personalization, and
             manipulate the upper limb exoskeleton. You can view a demonstration of the system by clicking on the OneDrive link provided
             <a href="https://1drv.ms/v/s!AmZUuXEUd5PYjJ5xuqneegELDF_Egg?e=4dkP9b"><b>here</b></a>!
+          </p>
+        </div>
+        <div class="pastproj-container">
+          <li class="pastproj-subtitle"><h4>Application for Lower Limb Exoskeleton</h4></li>
+          <img src="images/sw-LLExoGUI.gif" alt="" width="100%">
+          <p>
+            I developed a web-based GUI on Ubuntu using rospy, Plotly Dash, and Flask. This GUI enables real-time data visualization for
+            IMUs, encoders, and force sensors in a lower limb exoskeleton. It also allows users to control the exoskeleton and monitor its
+            status. The plots in the GUI dynamically adjust to changes in window size. The data currently generated are random, serving as
+            placeholders for illustration. The control panel is incomplete due to my departure to a new company, which limited the time
+            available to finalize the project.
           </p>
         </div>
         <div class="pastproj-container">
