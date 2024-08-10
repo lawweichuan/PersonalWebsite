@@ -301,7 +301,7 @@
 } */
 
 @media(max-width:800px){
-    .profile, .skills, .hobbies, .pastproj, .about{
+    .profile, .skills, .publication, .hobbies, .pastproj, .about{
       width: 90%;
     }
 }
