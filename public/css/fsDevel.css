@@ -1,0 +1,71 @@
+.software-top-container
+{
+  background-color: #de993a;
+  text-align: center;
+  height: 700px;
+}
+
+.software-title
+{
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  margin: 0 auto 2rem auto;
+  font-family: 'Montserrat', sans-serif;
+  color: #5c3602;
+}
+
+.dotted-line
+{
+  margin: 30px auto 0 auto;
+  border: dotted #FFFFFF 6px;
+  border-bottom: none;
+  width: 5%;
+  opacity: .8;
+}
+
+.software-content
+{
+  padding-top: 30px;
+  margin: 0 auto;
+  text-align: left;
+  width: 60%;
+  line-height: 2;
+  color: #5c3602;
+}
+
+@media(max-width:800px){
+  .software-content{
+      width: 90%;
+    }
+}
+
+.software-top-container .btn-outline-primary {
+  font-family: 'Montserrat', sans-serif;
+  --bs-btn-font-weight: 800;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: #5c3602;
+  --bs-btn-border-color: #5c3602;
+  --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+  --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+}
+
+.item{
+  padding-bottom: 5rem;
+}
+
+#footer-swDevel{
+  bottom: 0;
+  width: 100%;
+  background-color: #de993a;
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position:relative;
+  height: 2.5rem;            /* Footer height */
+  z-index: -1;
+}

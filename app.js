@@ -6,7 +6,7 @@ import express from "express";
 import bodyParser from "body-parser";
 const app = express();
 var getnavLink = "";
-var footerText = "Law Wei Chuan © Updated Jul 2024";
+var footerText = "Law Wei Chuan © Last Updated Feb 2026";
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
@@ -61,13 +61,16 @@ app.listen(port, function() {
 });
 
 
-// To Do List Database
-// const mongoose = require("mongoose");
-// mongoose.connect("mongodb://localhost:27017/todolistDB");
+// To Do List Database (MongoDB Atlas version)
+// import mongoose from "mongoose";
+// import dotenv from "dotenv";
+// dotenv.config();
+// mongoose.connect(process.env.DB_CONN);
+
+// To Do List Database (Localhost version, installation of MongoDB required)
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-dotenv.config();
-mongoose.connect(process.env.DB_CONN);
+mongoose.connect("mongodb://localhost:27017/todolistDB");
+
 const itemsSchema = { name: String,
                       expireAt: {
                         type: Date,

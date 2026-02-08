@@ -28,6 +28,7 @@
           <p id="nav-link-active"><%= navLink %></p>
           <div class="navbar-nav">
             <a class="nav-link" aria-current="page" href="#profile">Profile</a>
+            <a class="nav-link" href="#education">Education</a>
             <a class="nav-link" href="#skills">Skills</a>
             <a class="nav-link" href="#pastproj">Projects</a>
             <a class="nav-link" href="#publication">Publications</a>
@@ -55,113 +56,194 @@
 
   <section class="main-middle-container">
     <div id="profile" class="profile">
-      <img src="images/LawWeiChuan_Photo10.png" alt="Wei Chuan profile picture" height="350">
+      <img src="images/LawWeiChuan_Photo10.png" alt="Wei Chuan profile picture" height="200">
       <h4 class="main-subtitle">Hello.</h4>
       <div class="profile-container">
 
-          <p>I am a research engineer at the <a href="https://www.ntu.edu.sg/rris"><b>Rehabilitation Research Institute of Singapore, NTU</b></a>,
-            actively involved in developing innovative solutions in robotics.
-            Currently, I am refining my skills in web development and JavaScript with the goal of leveraging this expertise to stay competitive.
-            I am a self-motivated and dedicated individual who enjoys learning new things every day.
-            Althought I graduated from the School of Mechanical Engineering, my passion lies in <strong>coding! 👍</strong>
+          <p>I am a Research Engineer at the <a href="https://tcoms.sg/website"><b>Technology Centre for Offshore and Marine, 
+            Singapore (A*STAR)</b></a>, where I am actively involved in developing a web-based digital twin platform for 
+            floating offshore wind turbines. My work focuses on full-stack development, integrating machine learning and 
+            engineering models with real-time data and modern web technologies to create scalable and interactive digital 
+            solutions. I am a self-motivated and dedicated individual who enjoys continuous learning and strives to improve 
+            my technical and problem-solving skills.
+            Although I graduated from the School of Mechanical Engineering, my true passion lies in coding and software 
+            development, where I can combine engineering knowledge with modern computing technologies to build practical 
+            and impactful solutions.
           </p>
 
+      </div>
+    </div>
+
+    <div id="education" class="education">
+      <hr>
+      <h4 class="main-subtitle">My Education.</h4>
+      <div class="education-container">
+        <div class="education-card">
+          <div class="education-header">
+            <h5 class="education-degree">M.Eng. in Mechanical Engineering (Part Time)</h5>
+            <span class="education-date">Aug 2014 – Jul 2016</span>
+          </div>
+          <p class="education-school">School of Mechanical and Aerospace Engineering, Nanyang Technological University</p>
+          <div class="education-details">
+            <p><strong>GPA:</strong> 3.33/5</p>
+            <p><strong>Thesis:</strong> Design of Tunnel Robot for Inspection of Large-Diameter Sewerage Tunnel</p>
+            <p><strong>Relevant Modules:</strong> Design & Analysis of Experiments, Engineering Measurements, Robotics & Intelligent Sensors</p>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-header">
+            <h5 class="education-degree">B.Eng. in Mechanical Engineering</h5>
+            <span class="education-date">Aug 2010 – Jul 2013</span>
+          </div>
+          <p class="education-school">School of Mechanical and Aerospace Engineering, Nanyang Technological University</p>
+          <div class="education-details">
+            <p><strong>GPA:</strong> 4.16/5, Second Class Honors (Upper Division)</p>
+            <p><strong>Specialization:</strong> Mechatronics Engineering</p>
+            <p><strong>Relevant Modules:</strong> Mathematics, Microprocessor Systems, Real-time Software for Mechatronics Systems, Mechatronics Systems Design and Analysis, Mechatronics System Interfacing, Quality Assurance and Management</p>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="education-header">
+            <h5 class="education-degree">Diploma in Robotics & Mechatronics Engineering</h5>
+            <span class="education-date">Apr 2008 – Mar 2010</span>
+          </div>
+          <p class="education-school">School of Engineering, Nanyang Polytechnic</p>
+          <div class="education-details">
+            <p><strong>GPA:</strong> 3.95/4</p>
+            <p><strong>Specialization:</strong> Automation and Robotics Technology</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="skills" class="skills">
-    <hr>
+      <hr>
       <h4 class="main-subtitle">My Skills.</h4>
       <div class="skill-row">
-        <div class="soft-skill">
-          <img class="code-img" src="https://cdn-icons-png.flaticon.com/128/4412/4412960.png" alt="">
-          <h3 class="main-myskill">Soft Skill</h3>
-          <p>
-            Time Series Analysis,
-            Data Visualization and Analytics,
-            Communication,
-            Problem Solving,
-            Adaptability,
-            Critical Thinking,
-            Self-motivation and Independence,
-            Effective Multitasking,
-            Time Management,
-            Active Listening,
-            Creativity.
-          </p>
+        <div class="skill-card soft-skill">
+          <div class="skill-header">
+            <img class="code-img" src="images\softskill.png" alt="">
+            <h3 class="main-myskill">Soft Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Critical Thinking</span>
+            <span class="skill-tag">Time Management</span>
+            <span class="skill-tag">Adaptability</span>
+            <span class="skill-tag">Self-motivation</span>
+            <span class="skill-tag">Active Listening</span>
+            <span class="skill-tag">Creativity</span>
+            <span class="skill-tag">Multitasking</span>
+            <span class="skill-tag">Data Visualization</span>
+            <span class="skill-tag">Time Series Analysis</span>
+          </div>
         </div>
-        <div class="hard-skill">
-          <img class="code-img2" src="https://cdn-icons-png.flaticon.com/128/4412/4412862.png" alt="">
-          <h3 class="main-myskill">Hard Skill</h3>
-          <p> Windows, Ubuntu, ROS, git, Github, mongoDB, C++,
-              HTML, CSS, JavaScript, Python, NI Labview,
-              Excel VBA, Visual Basic, Solidworks, Ansys,
-              Omron (NB Designer, Sysmac Studio, CX-Programmer),
-              Siemens (TIA Portal), Solidworks, Ansys, etc.
-          </p>
+        <div class="skill-card hard-skill">
+          <div class="skill-header">
+            <img class="code-img2" src="images\hardskill.png" alt="">
+            <h3 class="main-myskill">Hard Skills</h3>
+          </div>
+          <div class="skill-category">
+            <h5 class="skill-category-title">Programming</h5>
+            <div class="skill-tags">
+              <span class="skill-tag tech">Python</span>
+              <span class="skill-tag tech">JavaScript</span>
+              <span class="skill-tag tech">C++</span>
+              <span class="skill-tag tech">HTML/CSS</span>
+              <span class="skill-tag tech">Excel VBA</span>
+              <span class="skill-tag tech">Visual Basic</span>
+              <span class="skill-tag tech">NI LabVIEW</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h5 class="skill-category-title">Tools & Platforms</h5>
+            <div class="skill-tags">
+              <span class="skill-tag tool">Git/GitHub</span>
+              <span class="skill-tag tool">MongoDB</span>
+              <span class="skill-tag tool">ROS</span>
+              <span class="skill-tag tool">Ubuntu</span>
+              <span class="skill-tag tool">Windows</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h5 class="skill-category-title">Engineering Software</h5>
+            <div class="skill-tags">
+              <span class="skill-tag eng">SolidWorks</span>
+              <span class="skill-tag eng">ANSYS</span>
+              <span class="skill-tag eng">Siemens TIA Portal</span>
+              <span class="skill-tag eng">Omron Sysmac Studio</span>
+              <span class="skill-tag eng">CX-Programmer</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-
     <div id="pastproj" class="pastproj">
-    <hr>
+      <hr>
       <h4 class="main-subtitle">My Past Projects.</h4>
-        <ul>
-          <div class="pastproj-container">
-            <li class="pastproj-subtitle"><h4>Software Development</h4></li>
-            <p> This is my favorite part. In the journey of creating and maintaining applications, I have immersed myself in
-              the process of conceiving, specifying, designing, programming, testing, documenting, and bug fixing. Continuous
-              learning and adapting to emerging technologies are integral aspects of software development, given the dynamic
-              and ever-evolving nature of the field. This dynamism is the beauty of software development—it iterates rapidly,
-              fostering efficiency and innovation in our lives and society. My objective is to become a successful software
-              developer, possessing a blend of technical proficiency, creativity, problem-solving skills, and a keen understanding
-              of end-users' needs.
-            </p>
-          </div>
-          <form class="item" action="/swDevel" method="post">
-            <button type="button submit" name="list" value="" class="btn btn-outline-primary">Software Development</button>
-          </form>
+      <ul>
+        <div class="pastproj-container">
+          <li class="pastproj-subtitle"><h4>Software Development</h4></li>
+          <p> This is my favorite part. In the journey of creating and maintaining applications, I have immersed myself in
+            the process of conceiving, specifying, designing, programming, testing, documenting, and bug fixing. Continuous
+            learning and adapting to emerging technologies are integral aspects of software development, given the dynamic
+            and ever-evolving nature of the field. This dynamism is the beauty of software development—it iterates rapidly,
+            fostering efficiency and innovation in our lives and society. My objective is to become a successful software
+            developer, possessing a blend of technical proficiency, creativity, problem-solving skills, and a keen understanding
+            of end-users' needs.
+          </p>
+        </div>
+        <form class="item" action="/swDevel" method="post">
+          <button type="button submit" name="list" value="" class="btn btn-outline-primary">Software Development</button>
+        </form>
 
-          <div class="pastproj-container">
-            <li class="pastproj-subtitle"><h4>Robotics Development</h4></li>
-            <p> From tunnel inspection robots to linen gripper, and from industrial automation systems to winch systems,
-                my work reflects the seamless integration of form and function.
-                My robotics development portfolio is more than a showcase; it's a celebration of the future, a testament to the
-                magic of robotics, and an invitation to envision the possibilities of a world where machines and humanity collaborate in perfect harmony.
+        <div class="pastproj-container">
+          <li class="pastproj-subtitle"><h4>Robotics Development</h4></li>
+          <p> From tunnel inspection robots to linen gripper, and from industrial automation systems to winch systems,
+              my work reflects the seamless integration of form and function.
+              My robotics development portfolio is more than a showcase; it's a celebration of the future, a testament to the
+              magic of robotics, and an invitation to envision the possibilities of a world where machines and humanity collaborate in perfect harmony.
 
-            </p>
-          </div>
-          <form class="item" action="/hwDesign" method="post">
-            <button type="button submit" name="list" value="" class="btn btn-outline-primary">Robotics Development Portfolio</button>
-          </form>
+          </p>
+        </div>
+        <form class="item" action="/hwDesign" method="post">
+          <button type="button submit" name="list" value="" class="btn btn-outline-primary">Robotics Development Portfolio</button>
+        </form>
 
-          <div class="pastproj-container">
-              <li class="pastproj-subtitle"><h4>3D Model Rendering</h4></li>
-            <p> In the realm of cutting-edge technology and automation, my passion for robotics comes alive through the art of 3D model rendering.
-              Within these digital pages, I have meticulously curated a collection of my most compelling 3D rendering projects,
-              each a testament to my technical prowess and my ability to breathe life into robotic concepts.
+        <div class="pastproj-container">
+            <li class="pastproj-subtitle"><h4>3D Model Rendering</h4></li>
+          <p> In the realm of cutting-edge technology and automation, my passion for robotics comes alive through the art of 3D model rendering.
+            Within these digital pages, I have meticulously curated a collection of my most compelling 3D rendering projects,
+            each a testament to my technical prowess and my ability to breathe life into robotic concepts.
 
-              In the world of robotics, 3D rendering isn't just a visual representation; it's a language that communicates the potential and promise of technology.
-              Through photorealistic renderings and dynamic simulations, I bring these mechanical marvels to life,
-              demonstrating not only their capabilities but also their potential impact on society.
-            </p>
-          </div>
-          <form class="item" action="/hwRender" method="post">
-            <button type="button submit" name="list" value="" class="btn btn-outline-primary">3D Rendering Portfolio</button>
-          </form>
+            In the world of robotics, 3D rendering isn't just a visual representation; it's a language that communicates the potential and promise of technology.
+            Through photorealistic renderings and dynamic simulations, I bring these mechanical marvels to life,
+            demonstrating not only their capabilities but also their potential impact on society.
+          </p>
+        </div>
+        <form class="item" action="/hwRender" method="post">
+          <button type="button submit" name="list" value="" class="btn btn-outline-primary">3D Rendering Portfolio</button>
+        </form>
       </ul>
     </div>
 
     <div id="publication" class="publication">
-    <hr>
+      <hr>
       <h4 class="main-subtitle">Publications and Patents.</h4>
       <div class="publication-container">
         <ul>
           <li class="publication-subtitle"><h4>Journals and Conferences</h4>
             <ul>
-              <li><p>(Pending) Soh, L. J. & Lim, L. S. & <b>Law, W. C.</b> & Lau, J. L. & Lie, E. & Yeh, I. L. & Gonzalez, P. C. & Sidarta, A.
-                  & Ang, W. T. (2024). Technical Properties of a Sensor-Aided Key Rig for Hand Function Measurement: A Proof of Concept Study.</p></li>
+              <li><p>Yang, Sibo & Luo, Lincong & <b>Law, Wei Chuan</b> & Wang, Youlong & li, Lei & Ang, Wei. (2025). CARE Robot: Design and Feasibility Assessment 
+                of an End-Effector Based Assistive Robot Manipulator for Adaptive Arm Support. IEEE/ASME Transactions on Mechatronics. PP. 1-12. 
+                10.1109/TMECH.2025.3569689. </p></li>
+              <li><p>Soh, L. J. & Lim, L. S. & <b>Law, W. C.</b> & Lau, J. L. & Lie, E. & Yeh, I. L. & Gonzalez, P. C. & Sidarta, A. & Ang, W. T. (2024). 
+                Technical Properties of a Sensor-Aided Key Rig for Hand Function Measurement: A Proof of Concept Study, IEEE Sensors Journal, pp(99):1-1, 
+                DOI: 10.1109/JSEN.2024.3494814.</p></li>
               <li><p>S. Yang & L. Luo & M. Liu & J. Chen & <b>W. C. Law</b> & M. Yuan & L. Li & W. T. Ang (2023). Adaptive Gravity Compensation
                   Framework Based on Human Upper Limb Model for Assistive Robotic Arm Extender, 2023 International Conference on Rehabilitation
                   Robotics (ICORR), Singapore, pp. 1-6, DOI: 10.1109/ICORR58425.2023.10304690. </p></li>
@@ -170,12 +252,16 @@
                 10.1109/RAAI56146.2022.10092985.</p></li>
               <li><p>Seet, G. & Yeo, S.H. & <b>Law, W. C.</b> & Burhan, B. & Wong, C.Y. & Sapari, S. & Liau, K.K. (2018). Design of Tunnel Inspection
                 Robot for Large Diameter Sewers. Procedia Computer Science. 133. 984-990. 10.1016/j.procs.2018.07.078.</p></li>
+              <li><p>I. Chen & E. Asadi & J. Nie & R. Yan & <b>W. C. Law</b> & E. Kayacan & S.H. Yeo & K.H. Low & G. Seet & R. Tiong (2016). Innovations in 
+                Infrastructure Service Robots, ROMANSY 21 – Robot Design, Dynamics and Control, DOI: 10.1007/978-3-319-33714-2_1.</p></li>
               <li><p><b>Law, W. C.</b> & Chen, I. M. & Yeo, S. H. & Seet, G. L. & Low, K. H. (2015). A Study of In-pipe Robots for Maintenance of
                 Large-Diameter Sewerage Tunnel. The 14th IFToMM World Congress, Taipei, Taiwan, 225-232.</p></li>
             </ul>
           </li>
           <li class="publication-subtitle"><h4>Patents</h4>
             <ul>
+              <li><p>S. Yang; L. Luo; L. Li; Y. Wang; <b>W. C. Law</b>; W. T. Ang, Upper Limb Assistive System and Method, PCT application number PCT/SG2024/050562, 
+                3 Sep 2024; World Intellectual Property Organization, Patent No. WO2025053788A1, 13 March 2025.</p></li>
               <li><p>W. T. Ang; L. Li; <b>W. C. Law</b>; W. Daniel; Y. Wang; R. Swaminathan; S. G. Chua; W. K Kuah; G. E. Toh; D. Wang, Transfer
                 assistive device and apparatus, World Intellectual Property Organization, Patent No. WO2024015020A1, 2024. </p></li>
               <li><p>S. Yang; L. Luo; L. Li; Y. Wang; <b>W. C. Law</b>; W. T. Ang, System Design And Control Framework For An Upper Limb Assistive
@@ -189,7 +275,7 @@
     </div>
 
     <div id="hobbies" class="hobbies">
-    <hr>
+      <hr>
       <h4 class="main-subtitle">My Hobbies.</h4>
       <div class="hobbies-container">
           <p> Drawing is one of the most powerful tool I have. It helps me reduce stress and calms my anxiety.
@@ -205,24 +291,25 @@
     </div>
 
     <div id="about" class="about">
-    <hr>
+      <hr>
       <h4 class="main-subtitle">About This Website.</h4>
       <div class="about-container">
         <p>
           Deploying a website through GitHub is a common practice, and it's often done using a continuous integration and
           continuous deployment (CI/CD) pipeline. CI/CD helps automate the process of building, testing, and deploying
-          website whenever changes are pushed to GitHub repository. Here's an overview of the process on how this webpage is deployed:
+          website whenever changes are pushed to GitHub repository. Here is an overview of the process used to deploy this simple 
+          webpage:
         </p>
         <img class="about-img" src="images/web-4.png" alt="">
         <br>
         <p>
-          (1)Source code of HTML, CSS and Javascript are created.
+          (1) Independently developed the HTML, CSS, and JavaScript source code.
         </p>
         <p>
-          (2)A GitHub repository is created to host my website's source code.
+          (2) A GitHub repository is created to host my website's source code.
         </p>
         <p>
-          (3)With CI/CD pipeline in place, every time changes pushed to GuiHub repository, the pipeline will
+          (3) With CI/CD pipeline in place, every time changes pushed to GuiHub repository, the pipeline will
           automatically trigger, building and deploying the website. Changes are live in a few seconds with every git push.
           This is where the Render part comes in: the process repeats each time there are updates.
         </p>
