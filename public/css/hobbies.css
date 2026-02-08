@@ -31,13 +31,14 @@
   --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
 
-.portfolio-image-caption {
+.portfolio-image-caption, .hwdesign-image-caption, .hwrender-image-caption {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   margin-top: 0.5rem;
   color: #FFFFFF;
 }
+
 
 #footer-hobbies{
   bottom: 0;
@@ -97,7 +98,7 @@
 /* Rendering Page */
 .rendering-top-container
 {
-  background-color: #81ef72;
+  background-color: #519448;
   text-align: center;
   height: 700px;
 }
@@ -109,15 +110,15 @@
   padding-top: 2rem;
   margin: 0 auto 2rem auto;
   font-family: 'Montserrat', sans-serif;
-  color: #46a839;
+  color: #26581f;
 }
 
 .rendering-top-container .btn-outline-primary {
   font-family: 'Montserrat', sans-serif;
   --bs-btn-font-weight: 800;
   --bs-btn-color: var(--bs-white);
-  --bs-btn-bg: #46a839;
-  --bs-btn-border-color: #46a839;
+  --bs-btn-bg: #26581f;
+  --bs-btn-border-color: #26581f;
   --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
   --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
   --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
@@ -129,7 +130,7 @@
 #footer-hwRender{
   bottom: 0;
   width: 100%;
-  background-color: #81ef72;
+  background-color: #519448;
   color: white;
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
