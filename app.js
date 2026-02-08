@@ -70,14 +70,14 @@ app.listen(port, function() {
 
 
 // To Do List Database (MongoDB Atlas version)
-// import mongoose from "mongoose";
-// import dotenv from "dotenv";
-// dotenv.config();
-// mongoose.connect(process.env.DB_CONN);
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
+mongoose.connect(process.env.DB_CONN);
 
 // To Do List Database (Localhost version, installation of MongoDB required)
-import mongoose from "mongoose";
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+// import mongoose from "mongoose";
+// mongoose.connect("mongodb://localhost:27017/todolistDB");
 
 const itemsSchema = { name: String,
                       expireAt: {
