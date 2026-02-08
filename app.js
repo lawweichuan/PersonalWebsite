@@ -69,13 +69,13 @@ app.listen(port, function() {
 });
 
 
-// To Do List Database (MongoDB Atlas version)
+// To Do List Database (Uncomment when deploying to Render)
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 mongoose.connect(process.env.DB_CONN);
 
-// To Do List Database (Localhost version, installation of MongoDB required)
+// To Do List Database (Uncomment when local development, installation of MongoDB required)
 // import mongoose from "mongoose";
 // mongoose.connect("mongodb://localhost:27017/todolistDB");
 

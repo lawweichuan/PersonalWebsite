@@ -31,6 +31,14 @@
   --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
 
+.portfolio-image-caption {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #FFFFFF;
+}
+
 #footer-hobbies{
   bottom: 0;
   width: 100%;
