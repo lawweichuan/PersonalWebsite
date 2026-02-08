@@ -187,6 +187,14 @@
       <h4 class="main-subtitle">My Past Projects.</h4>
       <ul>
         <div class="pastproj-container">
+          <li class="pastproj-subtitle"><h4>Full Stack Development</h4></li>
+          <p> Place holder text for future full stack development projects.
+          </p>
+        </div>
+        <form class="item" action="/fsDevel" method="post">
+          <button type="button submit" name="list" value="" class="btn btn-outline-primary">Full Stack Development</button>
+        </form>
+        <div class="pastproj-container">
           <li class="pastproj-subtitle"><h4>Software Development</h4></li>
           <p> This is my favorite part. In the journey of creating and maintaining applications, I have immersed myself in
             the process of conceiving, specifying, designing, programming, testing, documenting, and bug fixing. Continuous
@@ -350,6 +358,10 @@
       els[0].click();
     }
     else if(activated_nav_link == "hwRender"){
+      var els = document.querySelectorAll("a[href='#pastproj']");
+      els[0].click();
+    }
+    else if(activated_nav_link == "fsDevel"){
       var els = document.querySelectorAll("a[href='#pastproj']");
       els[0].click();
     }

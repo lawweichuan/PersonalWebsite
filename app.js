@@ -38,8 +38,16 @@ app.get("/hwRender", function(req,res){
     res.render("hwRender",{setFooterText:footerText});
 });
 
+app.post("/fsDevel", function(req, res){
+    res.redirect("/fsDevel");
+});
+
+app.get("/fsDevel", function(req,res){
+    res.render("fsDevel",{setFooterText:footerText});
+});
+
 app.post("/swDevel", function(req, res){
-    res.redirect("swDevel");
+    res.redirect("/swDevel");
 });
 
 app.get("/swDevel", function(req,res){
