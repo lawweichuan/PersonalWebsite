@@ -260,7 +260,7 @@ html {
 
 .education-details strong
 {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .main-top-container p,.main-middle-container p,.main-bottom-container p
