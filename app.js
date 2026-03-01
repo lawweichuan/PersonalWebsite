@@ -6,7 +6,7 @@ import express from "express";
 import bodyParser from "body-parser";
 const app = express();
 var getnavLink = "";
-var footerText = "Law Wei Chuan © Last Updated Feb 2026";
+var footerText = "Law Wei Chuan © Last Updated Mar 2026";
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));

@@ -5,7 +5,7 @@
   /* Primary palette */
   --color-primary: #146C94;
   --color-primary-dark: #01567a;
-  --color-primary-light: #19A7CE;
+  --color-primary-light: #8ed9ff;
 
   /* Accent colors */
   --color-accent: #66BFBF;
@@ -62,6 +62,14 @@ html {
   width: 100%;
   z-index: 4;
   box-shadow: var(--shadow-md);
+}
+
+.main-navbar.navbar-transparent {
+  box-shadow: none;
+}
+
+.main-navbar.navbar-transparent #bootstrap-overrides-nav {
+  background-color: transparent;
 }
 
 #bootstrap-overrides-nav {
@@ -299,9 +307,9 @@ html {
 }
 
 .gradient-bg-main-top{
-  background: linear-gradient(60deg,#abe7ff,#96ddfa,#0497d4,#146C94,#0c455e,#062938,#011017);
-  background-size:180% 180%;
-  animation: gradient-animation 5s ease infinite;
+  background: linear-gradient(45deg,#abe7ff,#96ddfa,#0497d4,#146C94,#0c455e,#062938,#011017);
+  background-size:300% 300%;
+  animation: gradient-animation 10s ease infinite;
 }
 
 @keyframes gradient-animation{
@@ -359,6 +367,7 @@ html {
   border-radius: 50%;
   box-shadow: var(--shadow-lg);
   transition: transform var(--transition-medium);
+  border: 6px solid white;
 }
 
 .profile img:hover
