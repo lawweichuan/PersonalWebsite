@@ -192,7 +192,7 @@ html {
   color: var(--color-text-medium);
 }
 
-.education-container
+.education-container, .currentproj-container
 {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -375,7 +375,7 @@ html {
   transform: scale(1.02);
 }
 
-.profile-container, .hobbies-container, .pastproj-container, .publication-container, .about-container, .education-container
+.profile-container, .currentproj-container, .hobbies-container, .pastproj-container, .publication-container, .about-container, .education-container
 {
   text-align: justify;
 }
@@ -391,7 +391,7 @@ html {
   color: var(--color-text-dark);
 }
 
-.profile, .skills, .hobbies, .publication, .pastproj, .about, .education
+.profile, .currentproj, .skills, .hobbies, .publication, .pastproj, .about, .education
 {
   margin: 0 auto;
   text-align: center;
@@ -565,6 +565,13 @@ html {
   float: right;
 }
 
+.currentproj-container .code-img2
+{
+  width: 100%;
+  float: none;
+  margin: 1rem 0 0 0;
+}
+
 .hobbies .btn-outline-primary, .pastproj .btn-outline-primary {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -682,7 +689,7 @@ html {
    RESPONSIVE DESIGN
    ======================================== */
 @media(max-width:800px){
-    .profile, .skills, .publication, .hobbies, .pastproj, .about, .education{
+    .profile, .currentproj, .skills, .publication, .hobbies, .pastproj, .about, .education{
       width: 90%;
     }
 

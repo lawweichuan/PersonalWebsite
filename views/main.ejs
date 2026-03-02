@@ -28,9 +28,10 @@
           <p id="nav-link-active"><%= navLink %></p>
           <div class="navbar-nav">
             <a class="nav-link" aria-current="page" href="#profile">Profile</a>
+            <a class="nav-link" href="#currentproj">Current Role</a>
             <a class="nav-link" href="#education">Education</a>
             <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#pastproj">Projects</a>
+            <a class="nav-link" href="#pastproj">Past Projects</a>
             <a class="nav-link" href="#publication">Publications</a>
             <a class="nav-link" href="#hobbies">Hobbies</a>
             <a class="nav-link" href="#about">About</a>
@@ -70,9 +71,45 @@
             development, where I can combine engineering knowledge with modern computing technologies to build practical 
             and impactful solutions.
           </p>
+          
 
       </div>
     </div>
+
+    <div id="currentproj" class="currentproj fade-in-section">
+      <hr>
+      <h4 class="main-subtitle">My Current Role.</h4>
+      <div class="currentproj-container">
+        <p>
+          I independently initiated and designed Phase 2 of a containerized Digital 
+          Twin platform in late February, building on lessons learned from Phase 1 
+          (described in my past projects) with a significantly improved architecture 
+          and largely different toolset. Phase 2 is currently developed and validated 
+          in a Windows-based local environment using Docker, with a planned production 
+          deployment on AWS using Kubernetes. The system follows a modular microservices 
+          architecture, featuring a React-based frontend (Material-UI, Plotly, WebGL) 
+          integrated with Grafana, Prometheus, and Loki for visualization, monitoring, 
+          and observability.
+
+          Backend services are implemented in Python (FastAPI) to provide centralized 
+          control, security, logging, and service consistency, with inter-service communication 
+          via gRPC and WebRTC. A dedicated AI & Analytics Microservice interfaces with a 
+          layered Data Lake architecture comprising ingestion (Airbyte, Kafka, Debezium), 
+          storage (PostgreSQL, TimescaleDB, InfluxDB, MinIO), processing (Redis, Celery, 
+          Spark, Flink), consumption (Trino, Elasticsearch, FastAPI, Grafana), orchestration 
+          (Prefect), and governance/security components (OpenMetadata, Keycloak). Real-time 
+          device integration is handled via an MQTT Broker connected to a Python-based Local 
+          Bridge application.
+
+          The current focus is on establishing a scalable, cloud-ready architectural backbone 
+          that improves upon Phase 1, enabling future Kubernetes-based deployment and the 
+          incremental integration of additional microservices and domain-specific modules 
+          as the platform evolves. The figure below shows a partial framework of the Phase 2 project.      
+        </p>
+        <img class="code-img2" src="images\currentproject.png" alt="" width="100%">
+      </div>
+    </div>
+
 
     <div id="education" class="education fade-in-section">
       <hr>
@@ -350,7 +387,7 @@
         <div class="pastproj-container">
           <li class="pastproj-subtitle"><h4>Full Stack Development</h4></li>
           <p> 
-            I independently designed, implemented, and deployed a full-featured Digital Twin platform supporting both 
+            I independently designed, implemented, and deployed a full-featured Digital Twin platform (Phase 1) supporting both 
             Ocean Basin real-time experiments and offline dataset replay. I developed a unified event-driven infrastructure 
             integrating frontend-backend services, asynchronous task orchestration with Celery, time-series database 
             management in PostgreSQL/TimescaleDB, and containerized deployment using Docker. I integrated a collaborator's 
