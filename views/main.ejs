@@ -28,9 +28,9 @@
           <p id="nav-link-active"><%= navLink %></p>
           <div class="navbar-nav">
             <a class="nav-link" aria-current="page" href="#profile">Profile</a>
-            <a class="nav-link" href="#currentproj">Current Role</a>
             <a class="nav-link" href="#education">Education</a>
             <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#currentproj">Current Work</a>
             <a class="nav-link" href="#pastproj">Past Projects</a>
             <a class="nav-link" href="#publication">Publications</a>
             <a class="nav-link" href="#hobbies">Hobbies</a>
@@ -75,41 +75,6 @@
 
       </div>
     </div>
-
-    <div id="currentproj" class="currentproj fade-in-section">
-      <hr>
-      <h4 class="main-subtitle">My Current Role.</h4>
-      <div class="currentproj-container">
-        <p>
-          I independently initiated and designed Phase 2 of a containerized Digital 
-          Twin platform in late February, building on lessons learned from Phase 1 
-          (described in my past projects) with a significantly improved architecture 
-          and largely different toolset. Phase 2 is currently developed and validated 
-          in a Windows-based local environment using Docker, with a planned production 
-          deployment on AWS using Kubernetes. The system follows a modular microservices 
-          architecture, featuring a React-based frontend (Material-UI, Plotly, WebGL) 
-          integrated with Grafana, Prometheus, and Loki for visualization, monitoring, 
-          and observability.
-
-          Backend services are implemented in Python (FastAPI) to provide centralized 
-          control, security, logging, and service consistency, with inter-service communication 
-          via gRPC and WebRTC. A dedicated AI & Analytics Microservice interfaces with a 
-          layered Data Lake architecture comprising ingestion (Airbyte, Kafka, Debezium), 
-          storage (PostgreSQL, TimescaleDB, InfluxDB, MinIO), processing (Redis, Celery, 
-          Spark, Flink), consumption (Trino, Elasticsearch, FastAPI, Grafana), orchestration 
-          (Prefect), and governance/security components (OpenMetadata, Keycloak). Real-time 
-          device integration is handled via an MQTT Broker connected to a Python-based Local 
-          Bridge application.
-
-          The current focus is on establishing a scalable, cloud-ready architectural backbone 
-          that improves upon Phase 1, enabling future Kubernetes-based deployment and the 
-          incremental integration of additional microservices and domain-specific modules 
-          as the platform evolves. The figure below shows a partial framework of the Phase 2 project.      
-        </p>
-        <img class="code-img2" src="images\currentproject.png" alt="" width="100%">
-      </div>
-    </div>
-
 
     <div id="education" class="education fade-in-section">
       <hr>
@@ -289,97 +254,41 @@
             </div>
           </div>
         </div>
-        <!-- <div class="skill-card hard-skill">
-          <div class="skill-header">
-            <img class="code-img2" src="images\hardskill.png" alt="">
-            <h3 class="main-myskill">Hard Skills</h3>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">Programming</h5>
-            <div class="skill-tags">
-              <span class="skill-tag tech">Python</span>
-              <span class="skill-tag tech">JavaScript</span>
-              <span class="skill-tag tech">C++</span>
-              <span class="skill-tag tech">MATLAB</span>
-              <span class="skill-tag tech">HTML/CSS</span>
-              <span class="skill-tag tech">Excel VBA</span>
-              <span class="skill-tag tech">Visual Basic</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">Frameworks & Libraries</h5>
-            <div class="skill-tags">
-              <span class="skill-tag tech">Flask</span>
-              <span class="skill-tag tech">React</span>
-              <span class="skill-tag tech">Material UI</span>
-              <span class="skill-tag tech">Plotly</span>
-              <span class="skill-tag tech">Socket.IO</span>
-              <span class="skill-tag tech">Axios</span>
-              <span class="skill-tag tech">Celery</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">Databases</h5>
-            <div class="skill-tags">
-              <span class="skill-tag tool">PostgreSQL</span>
-              <span class="skill-tag tool">TimescaleDB</span>
-              <span class="skill-tag tool">MongoDB</span>
-              <span class="skill-tag tool">Redis</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">DevOps & Tools</h5>
-            <div class="skill-tags">
-              <span class="skill-tag tool">Docker</span>
-              <span class="skill-tag tool">Docker-Compose</span>
-              <span class="skill-tag tool">Git/GitHub</span>
-              <span class="skill-tag tool">Grafana</span>
-              <span class="skill-tag tool">Ubuntu</span>
-              <span class="skill-tag tool">Windows</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">Networking</h5>
-            <div class="skill-tags">
-              <span class="skill-tag tech">WebSocket</span>
-              <span class="skill-tag tech">TCP/IP</span>
-              <span class="skill-tag tech">UDP</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">CAD & Simulation</h5>
-            <div class="skill-tags">
-              <span class="skill-tag eng">SolidWorks</span>
-              <span class="skill-tag eng">ANSYS</span>
-              <span class="skill-tag eng">MATLAB Runtime</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">Industrial Automation</h5>
-            <div class="skill-tags">
-              <span class="skill-tag eng">NI LabVIEW</span>
-              <span class="skill-tag eng">Siemens TIA Portal</span>
-              <span class="skill-tag eng">Omron Sysmac Studio</span>
-              <span class="skill-tag eng">ROS</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">3D & Visualization</h5>
-            <div class="skill-tags">
-              <span class="skill-tag tech">Unity</span>
-              <span class="skill-tag tech">WebGL</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h5 class="skill-category-title">Machine Learning</h5>
-            <div class="skill-tags">
-              <span class="skill-tag tech">TCN</span>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
+    <div id="currentproj" class="currentproj fade-in-section">
+      <hr>
+      <h4 class="main-subtitle">Current Work – Digital Twin Platform (Phase 2).</h4>
+      <div class="currentproj-container">
+        <p>
+          I independently initiated and designed Phase 2 of a containerized Digital 
+          Twin platform in February, building on lessons learned from Phase 1 
+          (described in my past projects) with a significantly improved architecture 
+          and largely different toolset. Phase 2 is currently developed and validated 
+          in a Windows-based local environment using Docker, with a planned production 
+          deployment on AWS using Kubernetes. The system follows a modular microservices 
+          architecture, featuring a React-based frontend (Material-UI, Plotly, WebGL) 
+          integrated with Grafana, Prometheus, and Loki for visualization, monitoring, 
+          and observability.
 
+          Backend services are implemented in Python (FastAPI) to provide centralized 
+          control, security, logging, and service consistency, with inter-service communication 
+          via gRPC and WebRTC. A dedicated AI & Analytics Microservice interfaces with a 
+          layered Data Lake architecture comprising ingestion (Airbyte, Kafka, Debezium), 
+          storage (PostgreSQL, TimescaleDB, InfluxDB, MinIO), processing (Redis, Celery, 
+          Spark, Flink), consumption (Trino, Elasticsearch, FastAPI, Grafana), orchestration 
+          (Prefect), and governance/security components (OpenMetadata, Keycloak). Real-time 
+          device integration is handled via an MQTT Broker connected to a Python-based Local 
+          Bridge application.
+
+          The current focus is on establishing a scalable, cloud-ready architectural backbone 
+          that improves upon Phase 1, enabling future Kubernetes-based deployment and the 
+          incremental integration of additional microservices and domain-specific modules 
+          as the platform evolves. The figure below shows a partial framework of the Phase 2 project.      
+        </p>
+        <img class="code-img2" src="images\currentproject.png" alt="" width="100%">
+      </div>
+    </div>
     <div id="pastproj" class="pastproj fade-in-section">
       <hr>
       <h4 class="main-subtitle">My Past Projects.</h4>

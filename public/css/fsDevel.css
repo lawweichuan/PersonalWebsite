@@ -2,15 +2,40 @@
 CSS VARIABLES - Design System
 ======================================== */
 :root {
---shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
---color-primary-dark: #664f62;
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* Original pink/purple colors (commented out)
+  --color-primary-dark: #664f62;
+  --color-background-light: #ffcdf7;
+  --color-button-hover: #523c4f;
+  --color-button-active: #3d2e3b;
+  --color-subtitle: #4a3f50;
+  --color-section-bg: #76026314;
+  --color-box-shadow: #76026361;
+  --color-figcaption: #27030d;
+  --color-highlight: #fef3c7;
+  */
+
+  /* Blue colors from main.css */
+  --color-primary-dark: #01567a;
+  --color-background-light: #8ed9ff;
+  --color-button-hover: #146C94;
+  --color-button-active: #042330;
+  --color-subtitle: #083f54;
+  --color-section-bg: rgba(20, 108, 148, 0.08);
+  --color-box-shadow: rgba(20, 108, 148, 0.38);
+  --color-figcaption: #042330;
+  --color-highlight: #AFD3E2;
+
+  --color-white: #ffffff;
+  --color-text-muted: rgba(0, 0, 0, 0.5);
 }
    
 /* ===============================
 Top Container / Hero Section
 =============================== */
 .software-top-container {
-  background-color: #ffcdf7;
+  background-color: var(--color-background-light);
   text-align: center;
   min-height: 700px;
   display: flex;
@@ -28,7 +53,7 @@ Top Container / Hero Section
   padding-top: 2rem;
   margin: 0 auto 2rem auto;
   font-family: 'Montserrat', sans-serif;
-  color: #664f62;
+  color: var(--color-primary-dark);
   line-height: 1.2;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
@@ -36,7 +61,7 @@ Top Container / Hero Section
 /* Dotted line under title */
 .dotted-line {
   margin: 30px auto 0 auto;
-  border: dotted #ffffff 6px;
+  border: dotted var(--color-white) 6px;
   border-bottom: none;
   width: 5%;
   opacity: 0.8;
@@ -71,7 +96,7 @@ Top Container / Hero Section
   text-align: left;
   width: 60%;
   line-height: 1.9;
-  color: #664f62;
+  color: var(--color-primary-dark);
   font-size: 1.1rem;
 }
 
@@ -80,7 +105,7 @@ Top Container / Hero Section
 .software-content h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #4a3f50;
+  color: var(--color-subtitle);
   margin-top: 1.5rem;
 }
 
@@ -98,7 +123,7 @@ Top Container / Hero Section
 .pastproj-subtitle{
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #4a3f50;
+  color: var(--color-subtitle);
   margin-top: 1.5rem;
   margin-bottom: 3rem;
 }
@@ -106,9 +131,9 @@ Top Container / Hero Section
 .section-content{
   margin-top: 2rem;
   padding: 1rem;
-  background-color: #76026314;
+  background-color: var(--color-section-bg);
   border-radius: 8px;
-  box-shadow: inset 0 2px 5px #76026361;
+  box-shadow: inset 0 2px 5px var(--color-box-shadow);
 }
 
 .h5-style{
@@ -147,7 +172,7 @@ img{
 figcaption{
   text-align: center; 
   font-size: 0.9rem; 
-  color: #27030d; 
+  color: var(--color-figcaption); 
   margin-top: 0.2rem;  
 }
 
@@ -157,9 +182,9 @@ figcaption{
 .software-top-container .btn-outline-primary {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  color: #ffffff;
-  background-color: #664f62;
-  border-color: #664f62;
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -167,9 +192,9 @@ figcaption{
 }
 
 .software-top-container .btn-outline-primary:hover {
-  background-color: #523c4f;
-  border-color: #523c4f;
-  color: #fff;
+  background-color: var(--color-button-hover);
+  border-color: var(--color-button-hover);
+  color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -177,8 +202,8 @@ figcaption{
 .software-top-container .btn-outline-primary:active,
 .software-top-container .btn-outline-primary.active,
 .software-top-container .btn-outline-primary:first-child:active {
-  background-color: #3d2e3b !important;
-  border-color: #3d2e3b !important;
+  background-color: var(--color-button-active) !important;
+  border-color: var(--color-button-active) !important;
   color: #fff !important;
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
@@ -197,8 +222,8 @@ figcaption{
 #footer-swDevel {
   bottom: 0;
   width: 100%;
-  /* background-color: #ffcdf7; */
-  color: rgba(0, 0, 0, 0.5);
+  /* background-color: var(--color-background-light); */
+  color: var(--color-text-muted);
   text-align: center;
   position: relative;
   height: 2.5rem;
@@ -212,7 +237,7 @@ figcaption{
    Highlight / card effect
    =============================== */
 .highlight {
-  background-color: #fef3c7;
+  background-color: var(--color-highlight);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   font-weight: 600;

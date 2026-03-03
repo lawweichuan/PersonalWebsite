@@ -2,8 +2,23 @@
 CSS VARIABLES - Design System
 ======================================== */
 :root {
---shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
---color-primary-dark: #5c3602;
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+  /* Original orange/brown colors (commented out)
+  --color-primary-dark: #5c3602;
+  --color-primary-darker: #482a00;
+  --color-primary-darkest: #3a2200;
+  --color-background-main: #de993a;
+  */
+
+  /* Blue colors from main.css */
+  --color-primary-dark: #01567a;
+  --color-primary-darker: #146C94;
+  --color-primary-darkest: #042330;
+  --color-background-main: #8ed9ff;
+
+  --color-white: #ffffff;
+  --color-text-muted: rgba(0, 0, 0, 0.5);
 }
 
 /* ===============================
@@ -11,7 +26,7 @@ Top Container / Hero Section
 =============================== */
 .software-top-container
 {
-  background-color: #de993a;
+  background-color: var(--color-background-main);
   text-align: center;
   min-height: 700px;
   display: flex;
@@ -29,7 +44,7 @@ Top Container / Hero Section
   padding-top: 2rem;
   margin: 0 auto 2rem auto;
   font-family: 'Montserrat', sans-serif;
-  color: #5c3602;
+  color: var(--color-primary-dark);
   line-height: 1.2;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
@@ -37,7 +52,7 @@ Top Container / Hero Section
 .dotted-line
 {
   margin: 30px auto 0 auto;
-  border: dotted #FFFFFF 6px;
+  border: dotted var(--color-white) 6px;
   border-bottom: none;
   width: 5%;
   opacity: .8;
@@ -73,7 +88,7 @@ Top Container / Hero Section
   text-align: left;
   width: 60%;
   line-height: 1.9;
-  color: #5c3602;
+  color: var(--color-primary-dark);
   font-size: 1.1rem;
 }
 
@@ -89,9 +104,9 @@ Top Container / Hero Section
 .software-top-container .btn-outline-primary {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  color: #ffffff;
-  background-color: #5c3602;
-  border-color: #5c3602;
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
   padding: 0.6rem 1.5rem;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -99,9 +114,9 @@ Top Container / Hero Section
 }
 
 .software-top-container .btn-outline-primary:hover {
-  background-color: #482a00;
-  border-color: #482a00;
-  color: #fff;
+  background-color: var(--color-primary-darker);
+  border-color: var(--color-primary-darker);
+  color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -109,9 +124,9 @@ Top Container / Hero Section
 .software-top-container .btn-outline-primary:active,
 .software-top-container .btn-outline-primary.active,
 .software-top-container .btn-outline-primary:first-child:active {
-  background-color: #3a2200 !important;
-  border-color: #3a2200 !important;
-  color: #fff !important;
+  background-color: var(--color-primary-darkest) !important;
+  border-color: var(--color-primary-darkest) !important;
+  color: var(--color-white) !important;
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
 }
@@ -129,9 +144,8 @@ Top Container / Hero Section
 #footer-swDevel{
   bottom: 0;
   width: 100%;
-  background-color: #de993a;
-  color: white;
-  color: rgba(0, 0, 0, 0.5);
+  background-color: var(--color-background-main);
+  color: var(--color-text-muted);
   text-align: center;
   position:relative;
   height: 2.5rem;            /* Footer height */
