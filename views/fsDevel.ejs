@@ -49,7 +49,7 @@
           </section>
 
           <!-- Objectives -->
-          <section class="section-content"id="objectives">
+          <!-- <section class="section-content"id="objectives">
               <h5>Objectives</h5>
               <ul>
                   <li>Monitor FOWT platform motions, turbine dynamics, and mooring loads in real time.</li>
@@ -58,10 +58,51 @@
                   <li>Enable machine learning-based virtual sensing to estimate mooring line loads.</li>
                   <li>Support both real-time operation and offline simulation for validation and training.</li>
               </ul>
-          </section>      
+          </section>       -->
 
           <!-- Contributions -->
-          <section class="section-content"id="contributions">
+           <section class="section-content" id="contributions">
+            <h5>Key Contributions</h5>
+            <ul>
+              <li>Unified Real-Time and Offline Data Framework</li>
+              <p>
+                Architected a cloud-ready, event-driven infrastructure to handle both real-time ocean basin 
+                experiments and offline dataset replay within a single framework. Implemented consistent data 
+                ingestion, buffering, throttling, and visualization update mechanisms, ensuring high reliability 
+                and scalability.
+              </p>
+
+              <li>End-to-End Data Platform Design and Implementation</li>
+              <p>
+                Designed and deployed the full Digital Twin data platform, including frontend-backend integration, 
+                asynchronous task orchestration with Celery, time-series database architecture, and containerized 
+                deployment with Docker. Enabled cross-dashboard data synchronization and efficient cloud-ready workflows.
+              </p>
+
+              <li>Machine Learning Pipeline Integration</li>
+              <p>
+                Integrated virtual-sensing machine learning models into the platform by designing and implementing 
+                end-to-end ETL pipelines. Developed sliding-window buffering for time-series inputs, asynchronous 
+                model training and inference, and model persistence with Docker volumes, enabling seamless real-time 
+                and offline deployment.
+              </p>
+
+              <li>3D Visualization and Data Sync</li>
+              <p>
+                Integrated and enhanced Unity-based 3D visualization with real-time WebSocket data streams. Implemented 
+                synchronized visualization of structural motion, wave effects, and fatigue mapping, ensuring temporal 
+                alignment between sensor measurements and digital twin representation.
+              </p>
+
+              <li>Full Technical Ownership and Cloud Readiness</li>
+              <p>
+                Solely responsible for system architecture, cloud-ready deployment, CI/CD pipeline design, debugging, 
+                validation, and performance optimization. Maintained end-to-end coherence across data acquisition, 
+                ML services, visualization, and deployment infrastructure.
+              </p>
+            </ul>
+          </section>
+          <!-- <section class="section-content"id="contributions">
             <h5>Key Contributions</h5>
             <ul>
               <li>Unified Real-Time and Offline Architecture</li>
@@ -116,77 +157,59 @@
               </p>
             </ul>
 
-          </section>
+          </section> -->
 
           <!-- System Architecture -->
-          <section class="section-content"id="architecture">
-              <h5>System Architecture</h5>
-              <p>A high-level overview of the Digital Twin architecture is shown in
-              Figure 1, comprising three core components: (i) the physical
-              assets, equipped with sensors, located in the Ocean Basin; (ii)
-              single-directional data ingestion from the physical system to the
-              virtual system via a Data Acquisition (DAQ) device; and (iii) a
-              Windows-based workstation executing the virtual counterpart.</p>
+          <section class="section-content" id="architecture">
+            <h5>System Architecture</h5>
+            <p>
+              The Digital Twin architecture (Figure 1) consists of three core components: 
+              (i) physical assets in the Ocean Basin equipped with sensors, 
+              (ii) data ingestion from physical assets to the virtual system via a Data Acquisition (DAQ) device, 
+              and (iii) a virtual system executed on a workstation or cloud-enabled environment. 
+              The platform is deployed using Docker containers and follows a three-tier architecture—presentation, application, and data layers—separating concerns to improve scalability, maintainability, and operational efficiency.
+            </p>
 
-              <figure class="architecture-figure">
-                <img src="/images/architecturepic.png" alt="System Architecture Diagram">
-                <figcaption>
-                  Figure 1: System Architecture.
-                </figcaption>
-              </figure>
-              
-              <p>The system adopts a three-tier architecture comprising
-              presentation, application, and data layers, and is deployed using
-              Docker containers. The architecture separates concerns across
-              these distinct layers that communicate through well-defined
-              protocols, this improves scalability and maintainability.</p>
+            <figure class="architecture-figure">
+              <img src="/images/architecturepic.png" alt="System Architecture Diagram">
+              <figcaption>Figure 1: System Architecture Overview.</figcaption>
+            </figure>
 
-              <h6 class="h6-style">Presentation Layer</h6>
-              <p>
-                The topmost layer consists of a React-based web application that provides the user interface. 
-                It includes four main modules: (i) a WebGL-based 3D visualization component, built with Unity, 
-                for real-time and offline rendering of marine platform geometry, mooring lines, and wave surfaces; 
-                (ii) a machine learning interface for configuring machine learning model training, managing batch 
-                prediction tasks, and monitoring performance dashboards; (iii) a data management module for 
-                uploading, organizing, and maintaining time-series data; and (iv) an embedded Grafana dashboard 
-                for multi-channel data monitoring. The frontend communicates with the backend through Socket.IO 
-                for continuous data streaming, and leverages RESTful APIs to handle data management and file transfer 
-                operations.
-              </p>
+            <h6 class="h6-style">Presentation Layer</h6>
+            <p>
+              The top layer consists of a React-based web application providing the user interface. It includes: 
+              (i) a WebGL-based 3D visualization component (Unity) for real-time and offline rendering of platform geometry, mooring lines, and wave surfaces; 
+              (ii) a machine learning interface to configure training, manage batch predictions, and monitor performance; 
+              (iii) a data management module for uploading, organizing, and maintaining time-series datasets; and 
+              (iv) an embedded Grafana dashboard for multi-channel data visualization. 
+              The frontend streams data in real-time via Socket.IO and handles RESTful API calls for data management and file transfer.
+            </p>
 
-              <h6 class="h6-style">Application Layer</h6>
-              <p>
-                The middle layer handles all business logic and computational tasks, and comprises two primary 
-                components, namely the Flask backend server and a Celery worker pool. The former handles HTTP requests, 
-                manages WebSocket connections, and dispatches tasks. Specifically, it exposes RESTful API endpoints 
-                for data operations, provides Socket.IO handlers for real-time events, and acts as a Celery client 
-                to dispatch asynchronous tasks. The Celery worker pool executes computationally intensive operations 
-                through specialized workers: a default worker for general-purpose tasks, two GPU-accelerated workers 
-                for real-time training and inference of PyTorch- and MATLAB-based models, and a dedicated wave simulation 
-                worker for field reconstruction.
-              </p>
+            <h6 class="h6-style">Application Layer</h6>
+            <p>
+              The middle layer manages all computational logic and orchestration, comprising a Flask backend and a Celery worker pool. 
+              Flask handles HTTP requests, manages WebSocket connections, and dispatches asynchronous tasks to Celery workers. 
+              The worker pool includes a default worker for general-purpose tasks, GPU-accelerated workers for real-time PyTorch and MATLAB model training/inference, and a dedicated wave simulation worker for field reconstruction. 
+              This design ensures scalable, parallel execution of compute-intensive workloads.
+            </p>
 
-              <h6 class="h6-style">Data Layer</h6>
-              <p>
-                The foundation layer provides persistent storage and messaging infrastructure for the Digital Twin 
-                platform. Redis serves as the message broker for Celery task distribution and as a cache for frequently 
-                accessed data. TimescaleDB, a PostgreSQL extension optimized for time-series data, stores timestamped 
-                measurements, including six platform motion channels (surge, sway, heave, roll, pitch, yaw), mooring 
-                line tension loads, additional operational parameters, and virtual sensing predictions of mooring line 
-                tensions. File storage volumes contain machine learning model artifacts (e.g., .pt and .mat files), 
-                inference and wave field reconstructions packages, system configuration files, and temporary upload 
-                staging areas, ensuring data persistence across container restarts.
-              </p>
+            <h6 class="h6-style">Data Layer</h6>
+            <p>
+              The foundation layer provides persistent storage and messaging infrastructure. 
+              Redis functions as both the Celery message broker and a cache for frequently accessed data. 
+              TimescaleDB (PostgreSQL extension) stores timestamped measurements, including six motion channels, mooring line tensions, operational parameters, and virtual sensing predictions. 
+              Docker volumes store ML model artifacts (.pt, .mat), inference outputs, wave field reconstructions, system configuration files, and temporary uploads, ensuring data persistence across container restarts.
+            </p>
 
-              <h6 class="h6-style">Interfaces for real-time deployment</h6>
-              <p>
-                The Digital Twin system interfaces with external systems to receive real-time data through: (i) Qualisys 
-                Motion Capture which transmits 6-DOF platform motion via TCP/IP; (ii) Mooring line tension forces at the 
-                fairlead connection, measured by load cells via TCP/IP; (iii) Turbine rotor speed signals via TCP/IP; and 
-                (iv) Wave Probe System which pushes UDP datagrams containing multi-channel wave elevation measurements.
-              </p>
-
-
+            <h6 class="h6-style">Real-Time Data Interfaces</h6>
+            <p>
+              The system receives live data from multiple external sources: 
+              (i) Qualisys Motion Capture (6-DOF platform motion via TCP/IP), 
+              (ii) load cells at mooring line fairleads via TCP/IP, 
+              (iii) turbine rotor speed via TCP/IP, and 
+              (iv) wave probe systems delivering multi-channel UDP datagrams. 
+              These interfaces feed directly into the data platform, supporting real-time ingestion, ETL processing, and visualization.
+            </p>
           </section>
 
           <!-- Deployment -->
