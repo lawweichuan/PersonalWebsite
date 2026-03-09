@@ -97,6 +97,7 @@ html {
   letter-spacing: 0.3px;
   color: var(--color-text-light);
   transition: color var(--transition-fast);
+  white-space: nowrap;
 }
 
 #bootstrap-overrides-nav .nav-link::after {
