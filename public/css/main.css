@@ -368,7 +368,7 @@ html {
   border-radius: 50%;
   box-shadow: var(--shadow-lg);
   transition: transform var(--transition-medium);
-  border: 6px solid white;
+  border: 3px solid white;
 }
 
 .profile img:hover
