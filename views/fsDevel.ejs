@@ -30,7 +30,7 @@
             of Floating Offshore Wind Turbine and Virtual Sensing of Mooring Lines (Phase 1)</h4></li>
           
           <!-- Introduction -->
-          <section class="section-content" id="introduction">
+          <!-- <section class="section-content" id="introduction">
               <h5>Introduction</h5>
               <p>
                   Global electricity demand is rising rapidly with electric vehicles and AI data centers. 
@@ -46,7 +46,7 @@
                   You can view a demonstration of the web-based Digital Twin platform 
                   <a href="https://1drv.ms/v/c/d893771471b95466/IQDlO9APNBDETYY39Iz1fNQEAbRHH8MXaoVq-iSZSlSxXxM?e=Mg5T22"><b>here</b></a>!
               </p>
-          </section>
+          </section> -->
 
           <!-- Objectives -->
           <!-- <section class="section-content"id="objectives">
@@ -66,39 +66,32 @@
             <ul>
               <li>Unified Real-Time and Offline Data Framework</li>
               <p>
-                Architected a cloud-ready, event-driven infrastructure to handle both real-time ocean basin 
-                experiments and offline dataset replay within a single framework. Implemented consistent data 
-                ingestion, buffering, throttling, and visualization update mechanisms, ensuring high reliability 
-                and scalability.
+                Built a cloud-ready, event-driven infrastructure supporting both live ocean basin experiments and
+                offline dataset replay, with consistent data ingestion, buffering, throttling, and visualization.
               </p>
 
-              <li>End-to-End Data Platform Design and Implementation</li>
+              <li>End-to-End Data Platform</li>
               <p>
-                Designed and deployed the full Digital Twin data platform, including frontend-backend integration, 
-                asynchronous task orchestration with Celery, time-series database architecture, and containerized 
-                deployment with Docker. Enabled cross-dashboard data synchronization and efficient cloud-ready workflows.
+                Designed and deployed the full Digital Twin platform — frontend-backend integration, async task
+                orchestration (Celery), time-series DB, and containerized Docker deployment with cross-dashboard sync.
               </p>
 
               <li>Machine Learning Pipeline Integration</li>
               <p>
-                Integrated virtual-sensing machine learning models into the platform by designing and implementing 
-                end-to-end ETL pipelines. Developed sliding-window buffering for time-series inputs, asynchronous 
-                model training and inference, and model persistence with Docker volumes, enabling seamless real-time 
-                and offline deployment.
+                Integrated virtual-sensing ML models via ETL pipelines with sliding-window buffering, async
+                training/inference, and Docker volume persistence for real-time and offline deployment.
               </p>
 
               <li>3D Visualization and Data Sync</li>
               <p>
-                Integrated and enhanced Unity-based 3D visualization with real-time WebSocket data streams. Implemented 
-                synchronized visualization of structural motion, wave effects, and fatigue mapping, ensuring temporal 
-                alignment between sensor measurements and digital twin representation.
+                Enhanced Unity-based 3D visualization with real-time WebSocket streams, synchronizing structural
+                motion, wave effects, and fatigue mapping with sensor data.
               </p>
 
-              <li>Full Technical Ownership and Cloud Readiness</li>
+              <li>Full Technical Ownership</li>
               <p>
-                Solely responsible for system architecture, cloud-ready deployment, CI/CD pipeline design, debugging, 
-                validation, and performance optimization. Maintained end-to-end coherence across data acquisition, 
-                ML services, visualization, and deployment infrastructure.
+                Solely responsible for system architecture, cloud deployment, debugging, and performance optimization
+                across data acquisition, ML services, visualization, and infrastructure.
               </p>
             </ul>
           </section>
@@ -163,11 +156,14 @@
           <section class="section-content" id="architecture">
             <h5>System Architecture</h5>
             <p>
-              The Digital Twin architecture (Figure 1) consists of three core components: 
+              <!-- The Digital Twin architecture (Figure 1) consists of three core components: 
               (i) physical assets in the Ocean Basin equipped with sensors, 
               (ii) data ingestion from physical assets to the virtual system via a Data Acquisition (DAQ) device, 
-              and (iii) a virtual system executed on a workstation or cloud-enabled environment. 
-              The platform is deployed using Docker containers and follows a three-tier architecture—presentation, application, and data layers—separating concerns to improve scalability, maintainability, and operational efficiency.
+              and (iii) a virtual system executed on a workstation or cloud-enabled environment.  -->
+              The platform is deployed using Docker containers and follows a three-tier architecture—presentation, 
+              application, and data layers—separating concerns to improve scalability, maintainability, and operational 
+              efficiency. A demonstration of the web-based Digital Twin platform can be viewed
+              <a href="https://1drv.ms/v/c/d893771471b95466/IQDlO9APNBDETYY39Iz1fNQEAbRHH8MXaoVq-iSZSlSxXxM?e=Mg5T22"><b>here</b></a>.
             </p>
 
             <figure class="architecture-figure">
@@ -215,7 +211,7 @@
           <!-- Deployment -->
           <section class="section-content" id="deployment">
             <h5>Deployment of Digital Twin Platform</h5>
-            <p>
+            <!-- <p>
               The Digital Twin platform implements a unified event-driven architecture that supports both real-time streaming operation 
               and offline replay within a single computational framework. All core functionalities are consistently available 
               in both modes, including model training and retraining, dataset upload and management, and interactive visualization 
@@ -278,10 +274,10 @@
             <ul>
               <li>Aligned with sampling frequency in real-time mode</li>
               <li>Adjustable for accelerated playback in offline mode</li>
-            </ul>
+            </ul> -->
 
             <!-- <h6 class="h6-style">Inference Execution</h6> -->
-            <p>
+            <!-- <p>
               Prediction requests are dispatched asynchronously as Celery tasks routed to appropriate worker queues. 
               Tasks are executed by either Python-based or MATLAB-based workers.
               Inference results are:
@@ -322,10 +318,10 @@
             <figure>
               <img src="images/3dvisualization.png" alt="3D Visualization Dashboard">
               <figcaption>Figure 4. 3D Visualization Dashboard.</figcaption>
-            </figure>
+            </figure> -->
 
             <p>
-              In Figure 5, wave probe measurements, platform motions, mooring line tensions, 
+              In Figure 2, wave probe measurements, platform motions, mooring line tensions, 
               and turbine rotor speeds are streamed simultaneously into the 3D visualization 
               module, enabling real-time rendering of both the wave field and the platform's 
               structural response.
@@ -345,7 +341,7 @@
 
             <figure>
               <img src="images/3dfatigue.png" alt="Mooring Fatigue Visualization">
-              <figcaption>Figure 5. Measured (blue) and virtual-sensing (red) mooring loads with fatigue levels.</figcaption>
+              <figcaption>Figure 2. Measured (blue) and virtual-sensing (red) mooring loads with fatigue levels.</figcaption>
             </figure>
 
             <p>
@@ -353,20 +349,20 @@
               to zoom in and view detailed information presented in a 2D
               graph. The selected component is highlighted in red, and
               pressing the ESC key restores the previous view and hides the
-              detailed display. Figure 6 illustrates the blade hub selected
+              detailed display. Figure 3 illustrates the blade hub selected
               and highlighted in red, with its associated information, such as
               rotational speed, displayed in a 2D graph at the bottom left.
             </p>
 
             <figure>
               <img src="images/3dzoom.png" alt="Zoom-in View">
-              <figcaption>Figure 6. Zoom-in View of Blade Hub with 2D Detail Graph.</figcaption>
+              <figcaption>Figure 3. Zoom-in View of Blade Hub with 2D Detail Graph.</figcaption>
             </figure>
 
             <h6 class="h6-style">Time-Series Analytics Dashboard</h6>
 
             <p>
-              The time-series analytics dashboard, shown in Figure 7,
+              The time-series analytics dashboard, shown in Figure 4,
               supports both real-time visualization and offline playback
               analysis using Grafana. It presents historical sensor and wave
               probe data stored in the PostgreSQL database, as well as live
@@ -380,14 +376,14 @@
 
             <figure>
               <img src="images/2dgrafana.png" alt="Time-series Analytics Dashboard">
-              <figcaption>Figure 7. Time-series Analytics Dashboard.</figcaption>
+              <figcaption>Figure 4. Time-series Analytics Dashboard.</figcaption>
             </figure>
 
             <h6 class="h6-style">Machine Learning Model Training Dashboard</h6>
 
             <p>
               The Machine Learning Model Training Dashboard, shown
-              in Figure 8, supports the development of virtual sensing
+              in Figure 5, supports the development of virtual sensing
               models for estimating mooring line loads at the fairlead.
               The training workflow accommodates both Python-based
               and MATLAB-based machine learning frameworks. For  
@@ -411,13 +407,13 @@
 
             <figure>
               <img src="images/2dmltraining.png" alt="ML Training Dashboard">
-              <figcaption>Figure 8. Machine Learning Model Training Dashboard.</figcaption>
+              <figcaption>Figure 5. Machine Learning Model Training Dashboard.</figcaption>
             </figure>
 
             <p>
               A dedicated log window displays the model training progress,
               including the current iteration, elapsed time, RMSE, loss values,
-              and other relevant metrics, as illustrated in Figure 9. Upon
+              and other relevant metrics, as illustrated in Figure 6. Upon
               completion of the training task, a notification snackbar appears
               to inform the user, and the trained model is saved to the Docker
               volume for future deployment or retraining.
@@ -425,14 +421,14 @@
 
             <figure>
               <img src="images/2dmltrainingend.png" alt="Training Progress Log">
-              <figcaption>Figure 9. Training Progress Log Window.</figcaption>
+              <figcaption>Figure 6. Training Progress Log Window.</figcaption>
             </figure>
 
             <h6 class="h6-style">Machine Learning Model Inference Dashboard</h6>
 
             <p>
               The Machine Learning Model Inference Dashboard, shown
-              in Figure 10, enables performance verification of virtual sensing
+              in Figure 7, enables performance verification of virtual sensing
               models for estimating mooring line loads. The dashboard
               supports both externally uploaded models and models trained
               through the Machine Learning Model Training Dashboard.
@@ -452,13 +448,13 @@
 
             <figure>
               <img src="images/2dinference.png" alt="ML Inference Dashboard">
-              <figcaption>Figure 10. Machine Learning Model Inference Dashboard.</figcaption>
+              <figcaption>Figure 7. Machine Learning Model Inference Dashboard.</figcaption>
             </figure>
 
             <h6 class="h6-style">Database Management Dashboard</h6>
 
             <p>
-              Figure 11 illustrates the Database Management Dashboard,
+              Figure 8 illustrates the Database Management Dashboard,
               which provides a centralized interface for administering
               PostgreSQL databases. The dashboard displays a list of
               available databases, allowing users to rename databases, mark
@@ -474,7 +470,7 @@
 
             <figure>
               <img src="images/database.png" alt="Database Management Dashboard">
-              <figcaption>Figure 11. Database Management Dashboard.</figcaption>
+              <figcaption>Figure 8. Database Management Dashboard.</figcaption>
             </figure>
 
             <h6 class="h6-style">Validation of 3D Digital Twin Visualization</h6>
@@ -483,7 +479,7 @@
               The 3D digital twin visualization was validated by comparing
               recorded basin video footage with the rendered digital
               twin animation separately in a side-by-side configuration, as shown in
-              Figure 12. Synchronized playback confirmed that the digital
+              Figure 9. Synchronized playback confirmed that the digital
               twin accurately reproduced the platform’s motions. Moreover,
               the visualization offered an intuitive representation of platform
               dynamics that would be difficult to discern from time-series
@@ -492,13 +488,13 @@
 
             <figure>
               <img src="images/compare.png" alt="Basin vs Digital Twin">
-              <figcaption>Figure 12. Experimental Basin Video vs. Digital Twin Animation.</figcaption>
+              <figcaption>Figure 9. Experimental Basin Video vs. Digital Twin Animation.</figcaption>
             </figure>
 
           </section>
 
           <!-- Machine Learning Methodology -->
-          <section class="section-content"id="ml">
+          <!-- <section class="section-content"id="ml">
               <h5>Machine Learning Methodology</h5>
               <p>
                   Mooring line virtual sensing is a sequence-to-sequence regression problem:
@@ -511,7 +507,7 @@
               <p>
                   Moving-window inference continuously updates mooring line tensions in real time, enabling synchronized visualization and performance assessment.
               </p>
-          </section>
+          </section> -->
         </div>
       </ul>
     </div>
