@@ -61,40 +61,43 @@
           </section>       -->
 
           <!-- Contributions -->
-           <section class="section-content" id="contributions">
-            <h5>Key Contributions</h5>
-            <ul>
-              <li>Unified Real-Time and Offline Data Framework</li>
-              <p>
-                Built a cloud-ready, event-driven infrastructure supporting both live ocean basin experiments and
-                offline dataset replay, with consistent data ingestion, buffering, throttling, and visualization.
-              </p>
+        <section class="section-content" id="contributions">
+          <h5>Key Contributions</h5>
+          <ul>
+            <li>Unified Real-Time and Offline Data Framework</li>
+            <p>
+              Developed a cloud-ready, event-driven infrastructure supporting both live ocean basin experiments 
+              and offline dataset replay, with consistent mechanisms for data ingestion, buffering, rate control, 
+              and visualization.
+            </p>
 
-              <li>End-to-End Data Platform</li>
-              <p>
-                Designed and deployed the full Digital Twin platform — frontend-backend integration, async task
-                orchestration (Celery), time-series DB, and containerized Docker deployment with cross-dashboard sync.
-              </p>
+            <li>End-to-End Data Platform</li>
+            <p>
+              Designed and deployed the full Digital Twin platform, including frontend-backend integration, 
+              asynchronous task orchestration (Celery), time-series database management, and containerized Docker 
+              deployment with cross-dashboard synchronization.
+            </p>
 
-              <li>Machine Learning Pipeline Integration</li>
-              <p>
-                Integrated virtual-sensing ML models via ETL pipelines with sliding-window buffering, async
-                training/inference, and Docker volume persistence for real-time and offline deployment.
-              </p>
+            <li>Machine Learning Pipeline Integration</li>
+            <p>
+              Integrated virtual sensing machine learning models through ETL pipelines featuring sliding-window 
+              buffering, asynchronous training and inference, and persistent Docker volume storage to support both 
+              real-time and offline execution.
+            </p>
 
-              <li>3D Visualization and Data Sync</li>
-              <p>
-                Enhanced Unity-based 3D visualization with real-time WebSocket streams, synchronizing structural
-                motion, wave effects, and fatigue mapping with sensor data.
-              </p>
+            <li>3D Visualization and Data Synchronization</li>
+            <p>
+              Enhanced a Unity-based 3D visualization module with real-time WebSocket streaming, enabling synchronized 
+              visualization of structural motion, wave dynamics, and fatigue mapping aligned with sensor data.
+            </p>
 
-              <li>Full Technical Ownership</li>
-              <p>
-                Solely responsible for system architecture, cloud deployment, debugging, and performance optimization
-                across data acquisition, ML services, visualization, and infrastructure.
-              </p>
-            </ul>
-          </section>
+            <li>Full Technical Ownership</li>
+            <p>
+              Solely responsible for system architecture, cloud deployment, debugging, and performance optimization 
+              across data acquisition, machine learning services, visualization, and infrastructure layers.
+            </p>
+          </ul>
+        </section>
           <!-- <section class="section-content"id="contributions">
             <h5>Key Contributions</h5>
             <ul>
@@ -160,9 +163,10 @@
               (i) physical assets in the Ocean Basin equipped with sensors, 
               (ii) data ingestion from physical assets to the virtual system via a Data Acquisition (DAQ) device, 
               and (iii) a virtual system executed on a workstation or cloud-enabled environment.  -->
-              The platform is deployed using Docker containers and follows a three-tier architecture—presentation, 
-              application, and data layers—separating concerns to improve scalability, maintainability, and operational 
-              efficiency. A demonstration of the web-based Digital Twin platform can be viewed
+              The platform is deployed using Docker containers and follows a three-tier architecture comprising 
+              presentation, application, and data layers. This separation of concerns improves scalability, 
+              maintainability, and operational efficiency. A demonstration of the web-based Digital Twin platform 
+              can be viewed 
               <a href="https://1drv.ms/v/c/d893771471b95466/IQDlO9APNBDETYY39Iz1fNQEAbRHH8MXaoVq-iSZSlSxXxM?e=Mg5T22"><b>here</b></a>.
             </p>
 
@@ -185,7 +189,8 @@
             <p>
               The middle layer manages all computational logic and orchestration, comprising a Flask backend and a Celery worker pool. 
               Flask handles HTTP requests, manages WebSocket connections, and dispatches asynchronous tasks to Celery workers. 
-              The worker pool includes a default worker for general-purpose tasks, GPU-accelerated workers for real-time PyTorch and MATLAB model training/inference, and a dedicated wave simulation worker for field reconstruction. 
+              The worker pool includes a default worker for general-purpose tasks, GPU-accelerated workers for real-time PyTorch and MATLAB model 
+              training/inference, and a dedicated wave simulation worker for field reconstruction. 
               This design ensures scalable, parallel execution of compute-intensive workloads.
             </p>
 
@@ -193,8 +198,10 @@
             <p>
               The foundation layer provides persistent storage and messaging infrastructure. 
               Redis functions as both the Celery message broker and a cache for frequently accessed data. 
-              TimescaleDB (PostgreSQL extension) stores timestamped measurements, including six motion channels, mooring line tensions, operational parameters, and virtual sensing predictions. 
-              Docker volumes store ML model artifacts (.pt, .mat), inference outputs, wave field reconstructions, system configuration files, and temporary uploads, ensuring data persistence across container restarts.
+              TimescaleDB (PostgreSQL extension) stores timestamped measurements, including six motion channels, mooring line tensions, 
+              operational parameters, and virtual sensing predictions. 
+              Docker volumes store ML model artifacts (.pt, .mat), inference outputs, wave field reconstructions, system configuration 
+              files, and temporary uploads, ensuring data persistence across container restarts.
             </p>
 
             <h6 class="h6-style">Real-Time Data Interfaces</h6>
@@ -480,7 +487,7 @@
               recorded basin video footage with the rendered digital
               twin animation separately in a side-by-side configuration, as shown in
               Figure 9. Synchronized playback confirmed that the digital
-              twin accurately reproduced the platform’s motions. Moreover,
+              twin accurately reproduced the platform's motions. Moreover,
               the visualization offered an intuitive representation of platform
               dynamics that would be difficult to discern from time-series
               plots alone.

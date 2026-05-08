@@ -248,32 +248,26 @@
       <h4 class="main-subtitle">Current Work – Digital Twin Platform (Phase 2).</h4>
       <div class="currentproj-container">
         <p>
-          I independently initiated and designed Phase 2 of a containerized Digital 
-          Twin platform in February, building on lessons learned from Phase 1 
-          (described in my past projects) with a significantly improved architecture 
-          and largely different toolset. Phase 2 is currently developed and validated 
-          in a Windows-based local environment using Docker, with a planned production 
-          deployment on AWS using Kubernetes. The system follows a modular microservices 
-          architecture, featuring a React-based frontend (Material-UI, Plotly, WebGL) 
-          integrated with Grafana, Prometheus, and Loki for visualization, monitoring, 
-          and observability.
-
-          Backend services are implemented in Python (FastAPI) to provide centralized 
-          control, security, logging, and service consistency, with inter-service communication 
-          via gRPC and WebRTC. A dedicated AI & Analytics Microservice interfaces with a 
-          layered Data Warehouse architecture comprising ingestion (Airbyte, Kafka, Debezium), 
-          storage (PostgreSQL, TimescaleDB, MinIO), processing (Redis, Celery, 
-          Spark, Flink), consumption (Trino, Elasticsearch, FastAPI, Grafana), orchestration 
-          (Prefect), and governance/security components (OpenMetadata, Keycloak). Real-time 
-          device integration is handled via an MQTT Broker connected to a Python-based Local 
-          Bridge application.
-
-          The current focus is on establishing a scalable, cloud-native architectural 
-          foundation that builds upon and enhances Phase 1. This foundation is designed to 
-          support future Kubernetes-based deployment and enable the incremental integration of 
-          additional microservices and domain-specific modules as the platform evolves. The 
-          figure below illustrates the partial framework of the Phase 2 architecture currently 
-          under development.      
+          I independently initiated and designed Phase 2 of a containerized Digital Twin platform in February, building 
+          on lessons learned from Phase 1 (described in my past projects) with a redesigned architecture and an updated 
+          cloud-native technology stack. Phase 2 is currently being developed and functionally validated in a local 
+          Docker-based environment, with planned production deployment on AWS using Kubernetes. The platform adopts a 
+          modular microservices architecture, featuring a React-based frontend (Material UI and Plotly) integrated 
+          with Grafana, Prometheus, and Loki for visualization, monitoring, and observability.
+          Backend services are implemented in Python using FastAPI, with GraphQL serving as the API layer for communication 
+          between frontend and backend. Inter-service communication is handled via gRPC, while WebRTC is used for 
+          low-latency, real-time data streaming between the frontend and immersive 3D visualization components built with 
+          Unity/Unreal Engine.
+          A dedicated AI and Analytics microservice interfaces with a layered data platform architecture, comprising 
+          ingestion (Kafka and Debezium for streaming and change data capture), storage (TimescaleDB, MongoDB, MinIO), processing and 
+          computation (Redis for caching and pub/sub, Celery for asynchronous task orchestration, and Spark/Flink for 
+          distributed data processing), consumption (Trino, Elasticsearch, FastAPI, Grafana), orchestration (Prefect), 
+          and governance and security components (OpenMetadata, Keycloak). Real-time device integration is enabled through 
+          an MQTT broker (EMQX), connected to a Python-based local bridge application.
+          The current focus is on establishing a scalable, cloud-native foundation that extends and enhances Phase 1, 
+          enabling future Kubernetes-based deployment and supporting incremental integration of additional microservices 
+          and domain-specific modules as the platform evolves. The figure below illustrates the partial Phase 2 
+          architecture currently under development.  
         </p>
         <img class="code-img2" src="images\currentproject2.png" alt="" width="100%">
       </div>
@@ -284,18 +278,19 @@
       <ul>
         <div class="pastproj-container">
           <li class="pastproj-subtitle"><h4>Full Stack Development</h4></li>
-          <p> 
-            I independently designed, implemented, and deployed a full-featured Digital Twin platform (Phase 1) supporting both 
-            Ocean Basin real-time experiments and offline dataset replay. I developed a unified event-driven infrastructure 
-            integrating frontend-backend services, asynchronous task orchestration with Celery, time-series database 
-            management in PostgreSQL/TimescaleDB, and containerized deployment using Docker. I integrated a collaborator's 
-            virtual-sensing machine learning model, implementing end-to-end data preprocessing, sliding-window input 
-            construction, Celery-based asynchronous training and inference, model serialization, persistence, and 
-            retraining workflows. I also integrated and enhanced a Unity-based 3D visualization module, enabling structural 
-            motion and wave visualization and synchronization, fatigue visualization, and interactive UI controls through 
-            real-time communication. I held full technical ownership of system design, integration, validation, debugging, 
-            and performance optimization across all modules, ensuring seamless operation, reproducibility, and scalability 
-            across real-time and offline modes.
+          <p>
+            I independently designed, developed, and deployed a full-featured, web-based Digital Twin platform (Phase 1) 
+            to support real-time experiments and offline dataset replay for floating structures in TCOMS's Ocean Basin. The 
+            platform is built on a unified, event-driven architecture that integrates frontend and backend services, 
+            asynchronous task orchestration using Celery, time-series data management with PostgreSQL/TimescaleDB, and 
+            containerized deployment via Docker. I implemented an end-to-end machine learning pipeline to streamline model 
+            upload, storage, inference, and 
+            retraining. This pipeline includes data preprocessing, sliding-window input generation, asynchronous training 
+            and inference, and model serialization. In addition, I integrated and enhanced a Unity-based 3D visualization 
+            module, enabling real-time visualization of structural motion, wave dynamics, and fatigue levels, supported by 
+            interactive user interface controls. With full technical ownership across all modules, I led system design, 
+            integration, validation, debugging, and performance optimization, ensuring a seamless, reproducible, and 
+            scalable platform for both real-time and offline operational modes.
           </p>
         </div>
         <form class="item" action="/fsDevel" method="post">
@@ -375,6 +370,8 @@
           </li>
           <li class="publication-subtitle"><h4>Patents</h4>
             <ul>
+              <li><p>S. Yang; L. Luo; L. Li; Y. Wang; <b>W. C. Law</b>; W. T. Ang, Upper Limb Assistive System and Method, 
+                China Patent Application No. CN121816168A, 7 Apr 2026.</p></li>
               <li><p>S. Yang; L. Luo; L. Li; Y. Wang; <b>W. C. Law</b>; W. T. Ang, Upper Limb Assistive System and Method, PCT application number PCT/SG2024/050562, 
                 3 Sep 2024; World Intellectual Property Organization, Patent No. WO2025053788A1, 13 March 2025.</p></li>
               <li><p>W. T. Ang; L. Li; <b>W. C. Law</b>; W. Daniel; Y. Wang; R. Swaminathan; S. G. Chua; W. K Kuah; G. E. Toh; D. Wang, Transfer
